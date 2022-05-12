@@ -9,3 +9,5 @@
 @import url('./theme/_red.css');
 @import url('./theme/_black.css');
 @import url('./theme/_effect-nav-item.css');
+@import url('./module/header/_nav-item.css');
+@import url('./module/hero/_title.css');
