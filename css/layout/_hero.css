@@ -1,0 +1,8 @@
+.l-hero-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 var(--gutter-horizontal);
+  text-align: center;
+}

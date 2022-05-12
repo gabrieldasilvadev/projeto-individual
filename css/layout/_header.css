@@ -1,5 +1,5 @@
 #header {
-  margin-bottom: 96px;
+  margin-bottom: var(--m-xxl);
 }
 
 .l-header {
@@ -8,7 +8,7 @@
   align-items: center;
   width: 100%;
   height: 77px;
-  padding: 20px;
+  padding: var(--gutter-horizontal);
 }
 
 .l-header__nav-list {
@@ -16,8 +16,4 @@
   justify-content: space-between;
   align-items: center;
   gap: 24px;
-}
-
-.l-header__nav-item h6 {
-  padding: 14px 12px;
 }
