@@ -1,8 +1,10 @@
 .secundary-btn {
   background-color: var(--ui-black01);
   color: var(--ui-white);
+  transition: all 0.3s ease;
 }
 
 .secundary-btn:hover {
   background-color: var(--ui-black-03);
+  transition: all 0.3s ease;
 }

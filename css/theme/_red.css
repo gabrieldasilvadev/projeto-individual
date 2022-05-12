@@ -1,10 +1,12 @@
 .primary-btn {
   background-color: var(--color-primary-red01);
   color: var(--ui-white);
+  transition: all 0.3s ease;
 }
 
 .primary-btn:hover {
   background-color: var(--color-primary-red02);
+  transition: all 0.3s ease;
 }
 
 .text-red {
