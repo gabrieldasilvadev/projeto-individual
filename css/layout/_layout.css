@@ -1,5 +1,22 @@
+:root {
+  --gutter-horizontal: 24px;
+  --m-xxl: 96px;
+  --m-xl: 88px;
+  --m-l: 80px;
+  --m: 72px;
+  --m-s: 64px;
+  --m-xs: 56px;
+  --m-xxs: 48px;
+  --m-xxxs: 40px;
+  --m-xxxxs: 32px;
+  --m-xxxxxs: 24px;
+  --m-xxxxxxs: 16px;
+  --m-xxxxxxxs: 8px;
+  --m-xxxxxxxxs: 4px;
+}
+
 .l-container {
-  width: 85%;
+  width: 90%;
   margin: 0 auto;
 }
 
