@@ -1,0 +1,8 @@
+.secundary-btn {
+  background-color: var(--ui-black01);
+  color: var(--ui-white);
+}
+
+.secundary-btn:hover {
+  background-color: var(--ui-black-03);
+}
