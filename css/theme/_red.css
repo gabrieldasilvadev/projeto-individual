@@ -1,0 +1,12 @@
+.primary-btn {
+  background-color: var(--color-primary-red01);
+  color: var(--ui-white);
+}
+
+.primary-btn:hover {
+  background-color: var(--color-primary-red02);
+}
+
+.text-red {
+  color: var(--color-primary-red01);
+}
