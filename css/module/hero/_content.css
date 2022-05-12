@@ -1,0 +1,19 @@
+.hero-content--title {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 3rem;
+  line-height: 3rem;
+  letter-spacing: 0.05em;
+}
+
+.hero-content--text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.05em;
+}
+
+#hero .btn {
+  width: 50%;
+}
