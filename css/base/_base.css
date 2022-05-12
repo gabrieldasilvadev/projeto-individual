@@ -19,47 +19,47 @@ img {
 h1 {
   font-style: normal;
   font-weight: 800;
-  font-size: 56px;
-  line-height: 56px;
+  font-size: 3.5rem;
+  line-height: 3.5rem;
   letter-spacing: 0.05em;
 }
 
 h2 {
   font-style: normal;
   font-weight: 800;
-  font-size: 48px;
-  line-height: 56px;
+  font-size: 3rem;
+  line-height: 3.5rem;
   letter-spacing: 0.05em;
 }
 
 h3 {
   font-style: normal;
   font-weight: 800;
-  font-size: 40px;
-  line-height: 48px;
+  font-size: 2.5rem;
+  line-height: 3rem;
   letter-spacing: 0.05em;
 }
 
 h4 {
   font-style: normal;
   font-weight: 800;
-  font-size: 32px;
-  line-height: 40px;
+  font-size: 2rem;
+  line-height: 2.5rem;
   letter-spacing: 0.05em;
 }
 
 h5 {
   font-style: normal;
   font-weight: 800;
-  font-size: 28px;
-  line-height: 32px;
+  font-size: 1.75rem;
+  line-height: 2rem;
   letter-spacing: 0.05em;
 }
 
 h6 {
   font-style: normal;
   font-weight: 800;
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
   letter-spacing: 0.05em;
 }
