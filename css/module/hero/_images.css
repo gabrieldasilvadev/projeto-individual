@@ -1,16 +1,9 @@
 .hero-image--left p {
-  align-self: center;
   position: absolute;
   right: 10px;
-  top: 28%;
+  top: 24%;
   width: 323px;
   height: 40px;
-
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 24px;
-  letter-spacing: 0.05em;
 }
 
 .hero-image--left {
