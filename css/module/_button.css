@@ -1,4 +1,5 @@
 .btn {
+  font-family: 'Lato', 'Helvetica', sans-serif;
   border: none;
   outline: none;
   cursor: pointer;
@@ -11,5 +12,4 @@
   height: 48px;
   border-radius: 3px;
   padding: 14px 12px;
-  font-family: 'Lato', 'Helvetica', sans-serif;
 }
