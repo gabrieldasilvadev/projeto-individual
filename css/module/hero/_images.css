@@ -1,18 +1,15 @@
 .hero-image--left {
-  position: relative;
-  width: 48%;
+  display: flex;
+  align-items: center;
   z-index: 1;
-  margin-left: -24px;
-  margin-top: var(--m-xxl);
-  bottom: -24px;
+  margin: var(--m-xxl) 0 -1.75em -1.5em;
 }
 
 .hero-image--left p {
-  position: absolute;
   right: 10px;
-  top: 24%;
   width: 323px;
   height: 40px;
+  margin-bottom: 5.5em;
 }
 
 .hero-image--right {
