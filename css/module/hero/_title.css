@@ -1,4 +1,5 @@
 .section--title-wellcome {
   text-align: center;
   margin: var(--m-s) 0;
+  text-transform: capitalize;
 }
