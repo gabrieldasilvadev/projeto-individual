@@ -1,17 +1,17 @@
-.hero-image--left p {
-  position: absolute;
-  right: 10px;
-  top: 24%;
-  width: 323px;
-  height: 40px;
-}
-
 .hero-image--left {
   position: relative;
   width: 48%;
   z-index: -1;
   margin-left: -24px;
   margin-top: var(--m-xxl);
+}
+
+.hero-image--left p {
+  position: absolute;
+  right: 10px;
+  top: 24%;
+  width: 323px;
+  height: 40px;
 }
 
 .hero-image--right {
