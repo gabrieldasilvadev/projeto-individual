@@ -1,6 +1,5 @@
 .l-hero {
   position: relative;
-  height: 100vh;
 }
 
 .l-hero-content--text-box {
@@ -10,17 +9,4 @@
   padding: 0 var(--m-xxxxxxxxs);
   max-width: 550px;
   height: 300px;
-}
-
-.l-hero .hero-image--right {
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin-top: var(--m-xs);
-}
-
-.l-hero .hero-image--left {
-  position: absolute;
-  bottom: 0;
-  left: -20px;
 }
