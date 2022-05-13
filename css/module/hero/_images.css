@@ -1,0 +1,29 @@
+.hero-image--left p {
+  align-self: center;
+  position: absolute;
+  right: 10px;
+  top: 28%;
+  width: 323px;
+  height: 40px;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.05em;
+}
+
+.hero-image--left {
+  position: relative;
+  width: 48%;
+  z-index: -1;
+  margin-left: -24px;
+  margin-top: var(--m-xxl);
+}
+
+.hero-image--right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
