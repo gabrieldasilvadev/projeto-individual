@@ -22,6 +22,7 @@ h1 {
   font-size: 3.5rem;
   line-height: 3.5rem;
   letter-spacing: 0.05em;
+  text-transform: capitalize;
 }
 
 h2 {
@@ -30,6 +31,7 @@ h2 {
   font-size: 3rem;
   line-height: 3.5rem;
   letter-spacing: 0.05em;
+  text-transform: capitalize;
 }
 
 h3 {
@@ -38,6 +40,7 @@ h3 {
   font-size: 2.5rem;
   line-height: 3rem;
   letter-spacing: 0.05em;
+  text-transform: capitalize;
 }
 
 h4 {
@@ -46,6 +49,7 @@ h4 {
   font-size: 2rem;
   line-height: 2.5rem;
   letter-spacing: 0.05em;
+  text-transform: capitalize;
 }
 
 h5 {
@@ -54,6 +58,7 @@ h5 {
   font-size: 1.75rem;
   line-height: 2rem;
   letter-spacing: 0.05em;
+  text-transform: capitalize;
 }
 
 h6 {
@@ -62,4 +67,5 @@ h6 {
   font-size: 1.25rem;
   line-height: 1.75rem;
   letter-spacing: 0.05em;
+  text-transform: capitalize;
 }
