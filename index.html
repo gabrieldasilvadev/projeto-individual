@@ -12,6 +12,8 @@
     <link rel="shortcut icon" href="assets/icon/favicon.svg" />
     <title>SPTech School</title>
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="node_modules/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="node_modules/swiper/swiper-bundle.min.css"></link>
     <link rel="stylesheet" href="css/main.css" />
     <title>GBR21Pilots</title>
   </head>
@@ -167,7 +169,7 @@
     <section id="top-brazil">
       <div class="l-container">
         <h1>TØP in brazil</h1>
-        <article class="l-container l-top-brazil-text font-body-rg">
+        <article class="l-container l-top-brazil-text font-body-lg">
           <p>
             O Twenty One Pilots chega ao Brasil para Lollapalooza 2016,
             incluindo o festival na turnê do álbum "Blurryface", lançado em
@@ -197,7 +199,20 @@
     <section id="albums">
       <h1>albums</h1>
 
-      
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="assets/img/albums/blurryface.jpg" alt="" srcset=""></div>
+          <div class="swiper-slide"><img src="assets/img/albums/regional-at-the-best.jpg" alt="" srcset=""></div>
+          <div class="swiper-slide"><img src="assets/img/albums/scaled-and-icy.jpg" alt="" srcset=""></div>
+          <div class="swiper-slide"><img src="assets/img/albums/twenty-one-pilots.jpg" alt="" srcset=""></div>
+          <div class="swiper-slide"><img src="assets/img/albums/vessel.jpg" alt="" srcset=""></div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+
     </section>
+      <script src="js/swiper.js" defer></script>
   </body>
 </html>
