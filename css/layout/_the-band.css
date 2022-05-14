@@ -7,24 +7,24 @@
   grid-auto-flow: row;
 }
 
-.image1 {
+.l-image1 {
   grid-area: 1 / 3 / 4 / 9;
 }
 
-.image2 {
+.l-image2 {
   grid-area: 3 / 7 / 6 / 12;
 }
 
-.text2 {
+.l-text2 {
   grid-area: 6 / 8 / 11 / 11;
   text-align: justify;
 }
 
-.text1 {
+.l-text1 {
   grid-area: 4 / 4 / 5 / 6;
   text-align: justify;
 }
 
-.image3 {
+.l-image3 {
   grid-area: 7 / 2 / 11 / 7;
 }
