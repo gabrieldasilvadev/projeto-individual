@@ -1,7 +1,7 @@
 var swiper = new Swiper('.mySwiper', {
   slidesPerView: 3,
   speed: 400,
-  spaceBetween: 10,
+  spaceBetween: 32,
   loop: true,
   loopFillGroupWithBlank: true,
   pagination: {
