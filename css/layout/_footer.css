@@ -30,7 +30,7 @@
   border-bottom: var(--m-xxxxxxs);
   width: 100%;
   height: 60;
-  padding: 16px;
+  padding: var(--m-xxxxxxs);
   border-radius: 20px;
   margin-bottom: var(--m-xxxxxxs);
 }
