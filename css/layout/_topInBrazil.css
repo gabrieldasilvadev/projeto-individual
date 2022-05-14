@@ -1,0 +1,8 @@
+.l-top-brazil-text {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--m-xxxxs);
+  margin-bottom: var(--m-xxxxxxs);
+  line-height: var(--m-xxxxxs);
+  text-align: justify;
+}
