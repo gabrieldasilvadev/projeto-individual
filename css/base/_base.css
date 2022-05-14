@@ -23,6 +23,8 @@ h1 {
   line-height: 3.5rem;
   letter-spacing: 0.05em;
   text-transform: capitalize;
+  text-align: center;
+  margin: var(--m-s) 0;
 }
 
 h2 {
