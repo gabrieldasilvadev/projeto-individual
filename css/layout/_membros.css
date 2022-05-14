@@ -1,10 +1,18 @@
+.l-members {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .l-members-container {
   display: flex;
   align-items: center;
+  border-radius: 10px;
+  min-width: 900px;
+  width: 1170px;
+  height: 400px;
   column-gap: var(--m-xxxxs);
   background-color: var(--ui-black-02);
   color: var(--ui-white);
-  border-radius: 10px;
-  min-width: 900px;
-  height: 400px;
 }
