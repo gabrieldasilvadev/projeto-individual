@@ -24,7 +24,7 @@ h1 {
   letter-spacing: 0.05em;
   text-transform: capitalize;
   text-align: center;
-  margin: var(--m-s) 0;
+  margin: var(--m-xl) 0;
 }
 
 h2 {
