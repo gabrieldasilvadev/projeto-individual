@@ -1,0 +1,41 @@
+#footer {
+  background-color: var(--ui-black-02);
+  margin-top: var(--m-xxl);
+  width: 100%;
+}
+
+.container-red {
+  background-color: var(--color-primary-red02);
+  clip-path: polygon(100% 0, 100% 100%, 0% 99%, 0 15%);
+  width: 100%;
+}
+
+.l-footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+}
+
+.l-contact {
+  align-self: center;
+}
+
+.l-keep-in-touch {
+  display: flex;
+  flex-direction: column;
+}
+
+.l-keep-in-touch .input_email {
+  border-bottom: var(--m-xxxxxxs);
+  width: 100%;
+  height: 60;
+  padding: 16px;
+  border-radius: 20px;
+  margin-bottom: var(--m-xxxxxxs);
+}
+
+.l-map-site .map-site--list {
+  display: flex;
+  justify-content: space-between;
+}
