@@ -37,4 +37,5 @@
 
 .address {
   margin-top: var(--m-xxxxs);
+  width: 100%;
 }
