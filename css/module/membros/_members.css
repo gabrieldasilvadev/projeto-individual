@@ -1,7 +1,7 @@
-.members-title {
-  text-align: center;
-  margin: var(--m-s) 0;
+#members .btn {
+  width: 50%;
 }
+
 .member-info-list {
   display: flex;
   flex-direction: column;
@@ -9,16 +9,12 @@
 }
 
 .member-info-list li:nth-last-child(1) {
-  margin: 16px 0;
+  margin: var(--m-xxxxxxs) 0;
 }
 
 .member-info-list li p {
   max-width: 480px;
   min-width: 240px;
-}
-
-#members .btn {
-  width: 50%;
 }
 
 .select-member {
