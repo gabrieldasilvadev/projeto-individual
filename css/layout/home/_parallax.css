@@ -1,5 +1,5 @@
 .parallax-one {
-  background-image: url('../../assets/img/parallax/parallax1.gif');
+  background-image: url('../../../assets/img/parallax/parallax1.gif');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -8,7 +8,7 @@
 }
 
 .parallax-two {
-  background-image: url('../../assets/img/parallax/parallax2.gif');
+  background-image: url('../../../assets/img/parallax/parallax2.gif');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
