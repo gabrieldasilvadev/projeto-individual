@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-body {
+.body-register-login {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -44,12 +44,10 @@ input {
   text-align: center;
 }
 
-button {
+.btn-register-login {
   display: block;
   margin: var(--m-xxxxxs) auto 0 auto;
   width: 150px !important;
-  height: var(--m-xxxs);
-  border-radius: var(--m-xxxs);
   color: var(--ui-white);
   font-size: var(--m-xxxxxxs);
   cursor: pointer;
