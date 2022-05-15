@@ -1,0 +1,12 @@
+.forgot-pass {
+  margin-top: var(--m-xxxxxxs);
+  text-align: center;
+  font-size: var(--m-xxxxxxs);
+  font-weight: 600;
+  color: var(--ui-black01);
+  cursor: pointer;
+}
+
+.forgot-pass:hover {
+  color: var(--color-primary-red01);
+}
