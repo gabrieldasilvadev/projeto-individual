@@ -1,0 +1,20 @@
+.social-media {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.social-media ul {
+  list-style: none;
+}
+
+.social-media ul li {
+  display: inline-block;
+  cursor: pointer;
+  margin: 25px 15px;
+}
+
+.social-media img {
+  width: 40px;
+  height: 40px;
+}
