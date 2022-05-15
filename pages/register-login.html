@@ -10,77 +10,154 @@
     <title>Register/Login</title>
   </head>
   <body class="body-register-login">
-    <main class="l-container cont">
-      <div class="l-form sign-in">
-        <h2>Sign In</h2>
-        <label>
-          <span class="font-body-rg">Email Address</span>
-          <input type="email" name="email" />
-        </label>
-        <label>
-          <span class="font-body-rg">Password</span>
-          <input type="password" name="password" />
-        </label>
-        <button class="btn btn-register-login primary-btn" type="button">
-          Sign In
-        </button>
-        <p class="forgot-pass font-body-lg">Forgot Password ?</p>
-
-        <div class="social-media">
-          <ul>
-            <li><img src="../assets/img/register-login/facebook.png" /></li>
-            <li><img src="../assets/img/register-login/twitter.png" /></li>
-            <li><img src="../assets/img/register-login/linkedin.png" /></li>
-            <li><img src="../assets/img/register-login/instagram.png" /></li>
-          </ul>
+    <header id="header">
+      <div class="l-container">
+        <div class="l-header">
+          <h4 class="header__logo">
+            GBR<span class="text-red">21Pilots</span>
+          </h4>
+          <nav class="l-header__nav">
+            <ul class="l-header__nav-list">
+              <li class="header__nav--item">
+                <a href="#"><h6 class="underline-effect">About</h6></a>
+              </li>
+              <li class="header__nav--item">
+                <a href="#"><h6 class="underline-effect">Store</h6></a>
+              </li>
+              <li class="header__nav--item">
+                <a href="#"><h6 class="underline-effect">Contact</h6></a>
+              </li>
+              <li class="header__nav--item">
+                <a href="#"><h6 class="underline-effect">Gallery</h6></a>
+              </li>
+              <li class="header__nav--item">
+                <button class="btn secundary-btn">Log In</button>
+              </li>
+              <li class="header__nav--item">
+                <button class="btn primary-btn">
+                  <span>Sign Up</span>
+                </button>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
-
-      <div class="sub-cont">
-        <div class="img">
-          <div class="img-text m-up">
-            <h2>New here?</h2>
-            <p class="font-body-lg">
-              Sign up and discover great amount of new opportunities!
-            </p>
-          </div>
-          <div class="img-text m-in">
-            <h2>One of us?</h2>
-            <p class="font-body-lg">
-              If you already has an account, just sign in. We've missed you!
-            </p>
-          </div>
-          <div class="img-btn">
-            <span class="m-up font-body-rg">Sign Up</span>
-            <span class="m-in font-body-rg">Sign In</span>
-          </div>
-        </div>
-        <div class="form sign-up">
-          <h2>Sign Up</h2>
+    </header>
+    <div class="main-container">
+      <main class="l-container cont">
+        <div class="l-form sign-in">
+          <h2>Sign In</h2>
           <label>
-            <span class="font-body-rg">Name</span>
-            <input type="text" />
-          </label>
-          <label>
-            <span class="font-body-rg">Email</span>
-            <input type="email" />
+            <span class="font-body-rg">Email Address</span>
+            <input type="email" name="email" />
           </label>
           <label>
             <span class="font-body-rg">Password</span>
-            <input type="password" />
+            <input type="password" name="password" />
           </label>
-          <label>
-            <span class="font-body-rg">Confirm Password</span>
-            <input type="password" />
-          </label>
-          <button
-            type="button"
-            class="btn btn-register-login secundary-btn font-body-rg"
-          >
-            Sign Up Now
+          <button class="btn btn-register-login primary-btn" type="button">
+            Sign In
           </button>
+          <p class="forgot-pass font-body-lg">Forgot Password ?</p>
+
+          <div class="social-media">
+            <ul>
+              <li><img src="../assets/img/register-login/facebook.png" /></li>
+              <li><img src="../assets/img/register-login/twitter.png" /></li>
+              <li><img src="../assets/img/register-login/linkedin.png" /></li>
+              <li><img src="../assets/img/register-login/instagram.png" /></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="sub-cont">
+          <div class="img">
+            <div class="img-text m-up">
+              <h2>New here?</h2>
+              <p class="font-body-lg">
+                Sign up and discover great amount of new opportunities!
+              </p>
+            </div>
+            <div class="img-text m-in">
+              <h2>One of us?</h2>
+              <p class="font-body-lg">
+                If you already has an account, just sign in. We've missed you!
+              </p>
+            </div>
+            <div class="img-btn">
+              <span class="m-up font-body-rg">Sign Up</span>
+              <span class="m-in font-body-rg">Sign In</span>
+            </div>
+          </div>
+          <div class="form sign-up">
+            <h2>Sign Up</h2>
+            <label>
+              <span class="font-body-rg">Name</span>
+              <input type="text" />
+            </label>
+            <label>
+              <span class="font-body-rg">Email</span>
+              <input type="email" />
+            </label>
+            <label>
+              <span class="font-body-rg">Password</span>
+              <input type="password" />
+            </label>
+            <label>
+              <span class="font-body-rg">Confirm Password</span>
+              <input type="password" />
+            </label>
+            <button
+              type="button"
+              class="btn btn-register-login secundary-btn font-body-rg"
+            >
+              Sign Up Now
+            </button>
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer id="footer">
+      <div class="container-red">
+        <div class="l-container">
+          <div class="l-footer-container">
+            <div class="l-contact">
+              <div class="email">
+                <h6>say hello to:</h6>
+                <h5>gabriel.dsilva@sptech.school</h5>
+              </div>
+              <div class="l-keep-in-touch">
+                <h6>keep in touch</h6>
+                <input
+                  type="text"
+                  placeholder="Email Address"
+                  class="input_email"
+                />
+                <input class="btn secundary-btn" type="submit" value="Submit" />
+              </div>
+            </div>
+            <div class="l-map-site">
+              <h4>MAP SITE</h4>
+              <ul class="map-site--list">
+                <div class="list-left">
+                  <li><h6>Home</h6></li>
+                  <li><h6>About</h6></li>
+                  <li><h6>Store</h6></li>
+                </div>
+                <div class="list-right">
+                  <li><h6>Contact</h6></li>
+                  <li><h6>Gallery</h6></li>
+                  <li><h6>Register</h6></li>
+                </div>
+              </ul>
+              <p class="address font-body-lg">
+                Endereço: Rua Haddock Lobo, 595 - Cerqueira César, São Paulo -
+                SP, 01414-001
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-    </main>
+    </footer>
   </body>
 </html>
