@@ -6,30 +6,26 @@
   box-sizing: border-box;
 }
 
-.body-register-login {
-
-}
-
 h2 {
   width: 100%;
   text-align: center;
 }
 
-label {
+.label-register-login {
   display: block;
   width: 260px;
   margin: var(--m-xxxxxs) auto 0;
   text-align: center;
 }
 
-label span {
+.label-register-login span {
   font-size: var(--m-xxxxxxs);
   font-weight: 600;
   color: #505f75;
   text-transform: uppercase;
 }
 
-input {
+.input-register-login {
   display: block;
   width: 100%;
   margin-top: var(--m-xxxxxxxxs);
