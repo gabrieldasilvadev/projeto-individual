@@ -139,6 +139,11 @@
   transform: translateY(72px);
 }
 
+.img-btn:hover,
+.img-btn:hover {
+  color: var(--color-primary-red01);
+}
+
 .sign-up {
   -webkit-transform: translate3d(-900px, 0, 0);
   transform: translate3d(-900px, 0, 0);
