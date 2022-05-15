@@ -4,12 +4,12 @@
     <title>How to Design Login & Registration Form Transition</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="../css/main.css" />
     <link rel="shortcut icon" href="../assets/icon/favicon.svg" />
     <script type="text/javascript" src="../js/register-login.js" defer></script>
+    <link rel="stylesheet" href="../css/main.css" />
     <title>Register/Login</title>
   </head>
-  <body>
+  <body class="body-register-login">
     <main class="l-container cont">
       <div class="l-form sign-in">
         <h2>Sign In</h2>
@@ -21,7 +21,9 @@
           <span class="font-body-rg">Password</span>
           <input type="password" name="password" />
         </label>
-        <button class="btn primary-btn" type="button">Sign In</button>
+        <button class="btn btn-register-login primary-btn" type="button">
+          Sign In
+        </button>
         <p class="forgot-pass font-body-lg">Forgot Password ?</p>
 
         <div class="social-media">
@@ -71,7 +73,10 @@
             <span class="font-body-rg">Confirm Password</span>
             <input type="password" />
           </label>
-          <button type="button" class="btn secundary-btn font-body-rg">
+          <button
+            type="button"
+            class="btn btn-register-login secundary-btn font-body-rg"
+          >
             Sign Up Now
           </button>
         </div>
