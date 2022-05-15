@@ -1,3 +1,7 @@
+#hero {
+  margin-bottom: var(--m-xl);
+}
+
 .l-hero {
   position: relative;
 }
