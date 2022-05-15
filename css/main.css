@@ -1,7 +1,5 @@
 @import url('./base/_reset.css');
 @import url('./base/_base.css');
-@import url('layout/home/_header.css');
-@import url('layout/home/_footer.css');
 @import url('layout/home/_layout.css');
 @import url('layout/home/_hero.css');
 @import url('./module/_button.css');
@@ -9,9 +7,7 @@
 @import url('./theme/_red.css');
 @import url('./theme/_black.css');
 @import url('theme/home/_effect-nav-item.css');
-@import url('module/home/header/_nav-item.css');
 @import url('module/home/hero/_content.css');
-@import url('module/home/header/_logo.css');
 @import url('module/home/hero/_images.css');
 @import url('./base/_font-body.css');
 @import url('layout/home/_membros.css');
@@ -22,10 +18,14 @@
 @import url('layout/home/_topInBrazil.css');
 @import url('module/home/_swiper.css');
 @import url('layout/home/_albums.css');
-@import url('module/home/footer/_footer.css');
 @import url('../style.css');
 @import url('theme/register-login/_register-login.css');
 @import url('module/register-login/_socia-midia.css');
 @import url('module/register-login/_forgot-pass.css');
 @import url('base/_register-login.css');
 @import url('./layout/register-login/style.css');
+@import url('module/home/footer/_footer.css');
+@import url('layout/home/_header.css');
+@import url('layout/home/_footer.css');
+@import url('module/home/header/_logo.css');
+@import url('module/home/header/_nav-item.css');
