@@ -43,12 +43,3 @@ input {
   border-bottom: 1px solid rgba(109, 93, 93, 0.4);
   text-align: center;
 }
-
-.btn-register-login {
-  display: block;
-  margin: var(--m-xxxxxs) auto 0 auto;
-  width: 150px !important;
-  color: var(--ui-white);
-  font-size: var(--m-xxxxxxs);
-  cursor: pointer;
-}
