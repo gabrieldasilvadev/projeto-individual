@@ -6,11 +6,6 @@
   box-sizing: border-box;
 }
 
-h2 {
-  width: 100%;
-  text-align: center;
-}
-
 .label-register-login {
   display: block;
   width: 260px;
