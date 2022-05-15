@@ -23,3 +23,9 @@
 @import url('module/home/_swiper.css');
 @import url('layout/home/_albums.css');
 @import url('module/home/footer/_footer.css');
+@import url('../style.css');
+@import url('theme/register-login/_register-login.css');
+@import url('module/register-login/_socia-midia.css');
+@import url('module/register-login/_forgot-pass.css');
+@import url('base/_register-login.css');
+@import url('./layout/register-login/style.css');
