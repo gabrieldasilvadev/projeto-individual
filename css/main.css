@@ -29,3 +29,4 @@
 @import url('layout/home/_footer.css');
 @import url('module/home/header/_logo.css');
 @import url('module/home/header/_nav-item.css');
+@import url('../css/module/register-login/_button.css');
