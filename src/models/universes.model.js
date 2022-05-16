@@ -12,6 +12,7 @@ const Universe = db.define('universo', {
   nome: {
     type: DataTypes.STRING(45),
     allowNull: false,
+    unique: true,
   },
 });
 
