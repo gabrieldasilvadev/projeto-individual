@@ -13,6 +13,7 @@ const sequelize = new Sequelize(
       timestamps: true,
       freezeTableName: true,
     },
+    logging: false,
   }
 );
 
