@@ -13,27 +13,37 @@ const User = db.define('usuario', {
   nome: {
     type: DataTypes.STRING(45),
     allowNull: false,
+    validate: {
+      customValidaro(value) {
+        if (value === null || value <= 2) {
+          throw new Error('Email invalido');
+        }
+      },
+    },
   },
   sobrenome: {
     type: DataTypes.STRING(60),
-    allowNull: false,
+    allowNull: true,
   },
   email: {
-    type: DataTypes.STRING(100),
-    allowNull: false,
+    type: DataTypes.STRING,
     unique: true,
+    allowNull: true,
+    validate: {
+      isEmail: true,
+    },
   },
   sexo: {
     type: DataTypes.CHAR(1),
-    allowNull: false,
+    allowNull: true,
   },
   cep: {
     type: DataTypes.STRING(10),
-    allowNull: false,
+    allowNull: true,
   },
   numero: {
     type: DataTypes.STRING(10),
-    allowNull: false,
+    allowNull: true,
   },
   complemento: {
     type: DataTypes.STRING(10),
@@ -41,17 +51,17 @@ const User = db.define('usuario', {
   },
   senha: {
     type: DataTypes.STRING(45),
-    allowNull: false,
+    allowNull: true,
   },
   createdAt: {
     type: DataTypes.DATE,
     defaultValue: Date.now,
-    allowNull: false,
+    allowNull: true,
   },
   updatedAt: {
     type: DataTypes.DATE,
     defaultValue: Date.now,
-    allowNull: false,
+    allowNull: true,
   },
 });
 
