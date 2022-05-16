@@ -12,6 +12,7 @@ const Team = db.define('time', {
   nome: {
     type: DataTypes.STRING(45),
     allowNull: false,
+    unique: true,
   },
 });
 
