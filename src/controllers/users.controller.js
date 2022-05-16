@@ -23,6 +23,14 @@ class UserController {
     try {
       const newUser = await userModel.create(req.body);
       return res.status(200).json(newUser);
+      // const { name, email, password } = req.body;
+      // console.log(req)
+      // const user = await userModel.create({
+      //   name,
+      //   email,
+      //   password,
+      // });
+      // return res.status(200).json(user);
     } catch (error) {
       return res.status(500).json(error.message);
     }
@@ -40,11 +48,11 @@ class UserController {
 
   static async deleteUser(req, res) {
     try {
-      const seachUser = await userModel.findByPk(req.params.id);
-      await seachUser.destroy(req.params);
+      const searchUser = await userModel.findByPk(req.params.id);
+      await searchUser.destroy(req.params);
       return res
         .status(200)
-        .json({ mensagem: `id ${req.params.id} foi deletado!` });
+        .json({ mensagem: `O usuario de id ${req.params.id} foi deletado!` });
     } catch (error) {
       return res.status(500).json(error.message);
     }
