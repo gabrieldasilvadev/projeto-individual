@@ -5,7 +5,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" href="../assets/icon/favicon.svg" />
-    <script type="text/javascript" src="../js/register-login.js" defer></script>
+    <script
+      type="text/javascript"
+      src="../js/register/registrar.js"
+      defer
+    ></script>
     <link rel="stylesheet" href="../css/main.css" />
     <title>Register/Login</title>
   </head>
@@ -46,11 +50,15 @@
           <h2>Sign In</h2>
           <label class="label-register-login">
             <span class="font-body-rg">Email Address</span>
-            <input type="email" name="email" class="input-register-login"/>
+            <input type="email" name="email" class="input-register-login" />
           </label>
           <label class="label-register-login">
             <span class="font-body-rg">Password</span>
-            <input type="password" name="password" class="input-register-login" />
+            <input
+              type="password"
+              name="password"
+              class="input-register-login"
+            />
           </label>
           <button class="btn btn-register-login primary-btn" type="button">
             Sign In
@@ -86,31 +94,44 @@
               <span class="m-in font-body-rg">Sign In</span>
             </div>
           </div>
-          <div class="form sign-up">
+          <form class="form sign-up" id="form_register">
             <h2>Sign Up</h2>
             <label class="label-register-login">
               <span class="font-body-rg">Name</span>
-              <input type="text" class="input-register-login" />
+              <input type="text" class="input-register-login" id="input_name" />
             </label>
             <label class="label-register-login">
               <span class="font-body-rg">Email</span>
-              <input type="email" class="input-register-login" />
+              <input
+                type="email"
+                class="input-register-login"
+                id="input_email"
+              />
             </label>
             <label class="label-register-login">
               <span class="font-body-rg">Password</span>
-              <input type="password" class="input-register-login" />
+              <input
+                type="password"
+                class="input-register-login"
+                id="input_password"
+              />
             </label>
             <label class="label-register-login">
               <span class="font-body-rg">Confirm Password</span>
-              <input type="password" class="input-register-login" />
+              <input
+                type="password"
+                class="input-register-login"
+                id="input_confirm_password"
+              />
             </label>
             <button
               type="button"
+              id="btn_register"
               class="btn btn-register-login secundary-btn font-body-rg"
             >
               Sign Up Now
             </button>
-          </div>
+          </form>
         </div>
       </main>
     </div>
@@ -156,5 +177,6 @@
         </div>
       </div>
     </footer>
+    <script type="text/javascript" src="../js/register-login.js" defer></script>
   </body>
 </html>
