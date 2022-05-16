@@ -1,5 +1,21 @@
 {
+  "name": "projeto-individual-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/app.js",
+    "start": " src/server.js"
+  },
+  "author": "Gabriel da Silva",
+  "license": "MIT",
   "dependencies": {
-    "swiper": "^8.1.4"
+    "express": "^4.18.1",
+    "mariadb": "^3.0.0",
+    "sequelize": "^6.19.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
   }
 }
