@@ -34,14 +34,9 @@ function register() {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      nome: 'gabriel',
-      sobrenome: 'silva',
-      email: 'aaaaaaaa4443@gmail.com',
-      sexo: 'M',
-      cep: '08140060',
-      numero: '23',
-      complemento: '3',
-      senha: 'gabriel123',
+      name,
+      email,
+      senha,
     }),
   })
     .then((response) => response.json())
