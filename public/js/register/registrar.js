@@ -24,10 +24,13 @@ function register() {
     /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
   if (
-    name === '' ||
+    nome === '' ||
     email === '' ||
-    password === '' ||
-    confirmPassword === ''
+    senha === '' ||
+    confirmPassword === '' ||
+    time === '' ||
+    universo === '' ||
+    nivel === ''
   ) {
     alert('Preencha todos os campos');
     return;
@@ -42,11 +45,13 @@ function register() {
     alert('Senha invalida');
     return;
   }
+
+  if (senha !== confirmPassword) {
     alert('As senhas não conferem');
     return;
   }
 
-  console.log(name, email, password, confirmPassword);
+  console.log(name, email, senha, confirmPassword, time, universo, nivel);
 
   return fetch('http://localhost:3000/users', {
     method: 'POST',
