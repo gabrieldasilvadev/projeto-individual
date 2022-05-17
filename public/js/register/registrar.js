@@ -17,6 +17,12 @@ function register() {
   const universo = $selectUniverse.value;
   const nivel = $selectLevel.value;
 
+  const emailRegex =
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+  const passwordRegex =
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
   if (
     name === '' ||
     email === '' ||
@@ -27,7 +33,7 @@ function register() {
     return;
   }
 
-  if (password !== confirmPassword) {
+  if (emailRegex.test(email) === false) {
     alert('As senhas não conferem');
     return;
   }
