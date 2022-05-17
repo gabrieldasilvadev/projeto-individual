@@ -54,8 +54,11 @@ function register() {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      name,
+      nome,
       email,
+      time,
+      nivel,
+      universo,
       senha,
     }),
   })
