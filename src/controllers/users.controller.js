@@ -21,16 +21,9 @@ class UserController {
 
   static async createUser(req, res) {
     try {
+      console.log(req.body);
       const newUser = await userModel.create(req.body);
       return res.status(200).json(newUser);
-      // const { name, email, password } = req.body;
-      // console.log(req)
-      // const user = await userModel.create({
-      //   name,
-      //   email,
-      //   password,
-      // });
-      // return res.status(200).json(user);
     } catch (error) {
       return res.status(500).json(error.message);
     }
