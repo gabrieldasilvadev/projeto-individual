@@ -19,9 +19,4 @@ const Post = db.define('post', {
   },
 });
 
-Post.hasMany(User, {
-  constraints: true,
-  foreignKey: 'fkUsuario',
-});
-
 module.exports = Post;
