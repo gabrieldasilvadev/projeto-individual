@@ -68,6 +68,7 @@
 
 .sign-in {
   padding-top: 65px;
+  margin-top: 80px;
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
@@ -152,4 +153,5 @@
 .cont.s-signup .sign-up {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
+  margin: 46px;
 }
