@@ -1,6 +1,5 @@
 const { Sequelize, DataTypes } = require('sequelize');
 const db = require('../database/db');
-const Team = require('./teams.model');
 
 const Universe = db.define('universo', {
   idUniverso: {
@@ -16,4 +15,4 @@ const Universe = db.define('universo', {
   },
 });
 
-module.exports = Universe;
+// module.exports = Universe;
