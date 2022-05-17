@@ -1,4 +1,3 @@
-function register user
 function registerUser(name, email, password) {
   const data = {
     name,
@@ -13,8 +12,8 @@ function registerUser(name, email, password) {
     },
     body: JSON.stringify(data),
   })
-    .then(response => response.json())
-    .then(data => data);
+    .then((response) => response.json())
+    .then((data) => data);
 }
 
 // export default registerUser;
