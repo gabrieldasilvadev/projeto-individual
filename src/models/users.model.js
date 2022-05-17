@@ -1,7 +1,6 @@
 const { Sequelize, DataTypes } = require('sequelize');
 const db = require('../database/db');
 const Item = require('./items.model');
-const Team = require('./teams.model');
 
 const User = db.define('usuario', {
   idUsuario: {
@@ -33,22 +32,6 @@ const User = db.define('usuario', {
       isEmail: true,
     },
   },
-  sexo: {
-    type: DataTypes.CHAR(1),
-    allowNull: true,
-  },
-  cep: {
-    type: DataTypes.STRING(10),
-    allowNull: true,
-  },
-  numero: {
-    type: DataTypes.STRING(10),
-    allowNull: true,
-  },
-  complemento: {
-    type: DataTypes.STRING(10),
-    allowNull: true,
-  },
   senha: {
     type: DataTypes.STRING(45),
     allowNull: true,
@@ -67,7 +50,7 @@ const User = db.define('usuario', {
 
 User.hasMany(Item, {
   constraints: true,
-  foreignKey: 'fkUser',
+  foreignKey: 'fkUsuario',
 });
 
 module.exports = User;
