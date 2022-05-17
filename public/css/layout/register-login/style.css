@@ -30,6 +30,14 @@
   transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
 }
 
+.l-divisor {
+  display: flex;
+}
+
+.l-divisor label {
+  margin: var(--m-xxxxxs) ;
+}
+
 .submit {
   margin-top: var(--m-xxxs);
   margin-bottom: var(--m-xxxxs);
