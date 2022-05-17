@@ -4,6 +4,9 @@ const $email = document.querySelector('#input_email');
 const $password = document.querySelector('#input_password');
 const $confirmPassword = document.querySelector('#input_confirm_password');
 const $btnRegister = document.querySelector('#btn_register');
+const $selectTeam = document.querySelector('#select_team');
+const $selectUniverse = document.querySelector('#select_universe');
+const $selectLevel = document.querySelector('#select_level');
 
 function register() {
   const name = $name.value;
