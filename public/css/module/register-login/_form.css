@@ -1,0 +1,42 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.label-register-login {
+  display: block;
+  width: 260px;
+  margin: var(--m-xxxxxxs) auto 0 auto;
+  text-align: center;
+}
+
+.label-register-login span {
+  font-size: var(--m-xxxxxxs);
+  font-weight: 600;
+  color: #505f75;
+  text-transform: uppercase;
+}
+
+.input-register-login {
+  display: block;
+  width: 100%;
+  margin-top: var(--m-xxxxxxxxs);
+  font-size: var(--m-xxxxxxs);
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(109, 93, 93, 0.4);
+  text-align: center;
+}
+
+.select-register {
+  width: 100%;
+  border: 1px solid rgba(109, 93, 93, 0.4);
+  border-radius: 0.25em;
+  padding: 10px 0;
+  cursor: pointer;
+  background-color: var(--ui-white);
+  outline: none;
+  margin-top: 20px;
+}
