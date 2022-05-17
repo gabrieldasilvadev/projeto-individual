@@ -9,9 +9,9 @@ const $selectUniverse = document.querySelector('#select_universe');
 const $selectLevel = document.querySelector('#select_level');
 
 function register() {
-  const name = $name.value;
-  const email = $email.value;
-  const password = $password.value;
+  const nome = $name.value.toLowerCase();
+  const email = $email.value.toLowerCase();
+  const senha = $password.value;
   const confirmPassword = $confirmPassword.value;
 
   if (
