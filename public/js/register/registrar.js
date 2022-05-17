@@ -34,6 +34,14 @@ function register() {
   }
 
   if (emailRegex.test(email) === false) {
+    alert('Email invalido');
+    return;
+  }
+
+  if (passwordRegex.test(senha) === false) {
+    alert('Senha invalida');
+    return;
+  }
     alert('As senhas não conferem');
     return;
   }
