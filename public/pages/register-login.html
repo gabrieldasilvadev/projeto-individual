@@ -93,55 +93,74 @@
               <span class="m-in font-body-rg">Sign In</span>
             </div>
           </div>
-          <form class="form sign-up" id="form_register">
-            <label class="label-register-login">
-              <span class="font-body-rg">Name</span>
-              <input type="text" class="input-register-login" id="input_name" />
-            </label>
-            <label class="label-register-login">
-              <span class="font-body-rg">Email</span>
-              <input
-                type="email"
-                class="input-register-login"
-                id="input_email"
-              />
-            </label>
-            <label class="label-register-login">
-              <span class="font-body-rg">Seu time</span>
-              <select class="select-register" id="select_time">
-                <option selected>Selecione seu time</option>
-                <option value="1">Tyler Joseph</option>
-                <option value="2">Josh Dun</option>
-              </select>
-            </label>
+          <form class="l-form sign-up" id="form_register">
+            <div class="l-divisor">
+              <label class="label-register-login">
+                <span class="font-body-rg">Name</span>
+                <input
+                  type="text"
+                  class="input-register-login"
+                  id="input_name"
+                />
+              </label>
+              <label class="label-register-login">
+                <span class="font-body-rg">Email</span>
+                <input
+                  type="email"
+                  class="input-register-login"
+                  id="input_email"
+                />
+              </label>
+            </div>
+            <div class="l-divisor">
+              <label class="label-register-login">
+                <span class="font-body-rg">Seu time</span>
+                <select class="select-register" id="select_team">
+                  <option selected>Selecione seu time</option>
+                  <option value="tyler">Tyler Joseph</option>
+                  <option value="josh">Josh Dun</option>
+                </select>
+              </label>
+              <label class="label-register-login">
+                <span class="font-body-rg">Seu nível</span>
+                <select class="select-register" id="select_level">
+                  <option selected>Selecione seu nível</option>
+                  <option value="iniciante">Iniciante</option>
+                  <option value="intermediario">Intermediário</option>
+                  <option value="avancado">Avançado</option>
+                </select>
+              </label>
+            </div>
             <label class="label-register-login">
               <span class="font-body-rg">Seu universo</span>
-              <select class="select-register" id="select_universo">
+              <select class="select-register" id="select_universe">
                 <option selected>Selecione seu universo</option>
-                <option value="1">Twenty one pilots</option>
-                <option value="2">Regional at the best</option>
-                <option value="2">Vessel</option>
-                <option value="2">Blurryface</option>
-                <option value="2">Trench</option>
-                <option value="2">Scaled and icy</option>
+                <option value="twentyOnePilots">Twenty one pilots</option>
+                <option value="regionalAtTheBest">Regional at the best</option>
+                <option value="vessel">Vessel</option>
+                <option value="blurryface">Blurryface</option>
+                <option value="trench">Trench</option>
+                <option value="scaledAndIcy">Scaled and icy</option>
               </select>
             </label>
-            <label class="label-register-login">
-              <span class="font-body-rg">Password</span>
-              <input
-                type="password"
-                class="input-register-login"
-                id="input_password"
-              />
-            </label>
-            <label class="label-register-login">
-              <span class="font-body-rg">Confirm Password</span>
-              <input
-                type="password"
-                class="input-register-login"
-                id="input_confirm_password"
-              />
-            </label>
+            <div class="l-divisor">
+              <label class="label-register-login">
+                <span class="font-body-rg">Password</span>
+                <input
+                  type="password"
+                  class="input-register-login"
+                  id="input_password"
+                />
+              </label>
+              <label class="label-register-login">
+                <span class="font-body-rg">Confirm Password</span>
+                <input
+                  type="password"
+                  class="input-register-login"
+                  id="input_confirm_password"
+                />
+              </label>
+            </div>
             <button
               type="button"
               id="btn_register"
