@@ -13,6 +13,9 @@ function register() {
   const email = $email.value.toLowerCase();
   const senha = $password.value;
   const confirmPassword = $confirmPassword.value;
+  const time = $selectTeam.value;
+  const universo = $selectUniverse.value;
+  const nivel = $selectLevel.value;
 
   if (
     name === '' ||
