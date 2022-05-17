@@ -18,7 +18,7 @@ const Team = db.define('time', {
 
 Team.hasMany(Universe, {
   constraints: true,
-  foreignKey: 'fkTeam',
+  foreignKey: 'fkTime',
 });
 
-module.exports = Team;
+// module.exports = Team;
