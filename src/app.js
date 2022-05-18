@@ -10,8 +10,9 @@ const app = express();
 const port = 3000;
 const db = require('./database/db');
 
-const usersRouter = require('./routes/user.router');
-const postsRouter = require('./routes/post.router');
+// const usersRouter = require('./routes/user.router');
+// const postsRouter = require('./routes/post.router');
+const authRouter = require('./routes/auth.router');
 
 app.use(cors());
 
@@ -55,8 +56,10 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(usersRouter);
-app.use(postsRouter);
+// app.use(usersRouter);
+// app.use(postsRouter);
+app.use(authRouter);
+
 
 // .sync({ force: true })
 db.sync()
