@@ -4,12 +4,6 @@ const Item = require('./item.model');
 const Post = require('./post.model');
 
 const User = db.define('usuario', {
-  idUsuario: {
-    type: DataTypes.INTEGER,
-    primaryKey: true,
-    autoIncrement: true,
-    allowNull: false,
-  },
   nome: {
     type: DataTypes.STRING(60),
     allowNull: false,
@@ -31,7 +25,7 @@ const User = db.define('usuario', {
   },
 
   senha: {
-    type: DataTypes.STRING(45),
+    type: DataTypes.STRING,
     allowNull: false,
   },
   time: {
