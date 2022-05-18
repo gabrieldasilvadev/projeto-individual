@@ -3,8 +3,43 @@ const userModel = require('../models/user.model');
 const bcrypt = require('bcryptjs');
 
 class AuthController {
-  static login(req, res) {
-    return res.render('auth/login');
+  static list(req, res) {
+    try {
+      const users = userModel.findAll();
+      return res.status(200).json(users);
+    } catch (error) {
+      return res.status(500).json(error.message);
+    }
+  }
+
+  static async loginPost(req, res) {
+    const { email, senha } = req.body;
+
+    const user = await userModel.findOne({ where: { email: email } });
+
+    if (!user) {
+      console.log('message', 'Usuário não encontrado');
+      res.redirect('/login');
+
+      return;
+    }
+
+    const passwordMatch = bcrypt.compareSync(senha, user.senha);
+
+    if (!passwordMatch) {
+      console.log('message', 'Senha incorreta');
+      res.redirect('/login');
+
+      return;
+    }
+
+    req.session.userid = user.id;
+    console.log('message', 'Usuário logado com sucesso');
+    req.flash('success', 'Usuário logado com sucesso');
+
+    req.session.save(() => {
+      res.redirect('/');
+    });
   }
 
   static register(req, res) {
@@ -42,13 +77,18 @@ class AuthController {
       await userModel.create(newUser);
 
       req.session.userid = newUser.id;
-      req.flash('success', 'Usuário cadastrado com sucesso', idRandom);
+      req.flash('success', 'Usuário cadastrado com sucesso');
       req.session.save(() => {
         res.redirect('/');
       });
     } catch (error) {
       return res.status(500).json(error.message);
     }
+  }
+
+  static async logout(req, res) {
+    req.session.destroy();
+    res.redirect('/login');
   }
 }
 
