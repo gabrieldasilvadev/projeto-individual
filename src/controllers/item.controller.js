@@ -1,4 +1,4 @@
-const itemModal = require('../models/items.model');
+const itemModal = require('../models/item.model');
 
 class itemController {
   static async getAllItems(req, res) {

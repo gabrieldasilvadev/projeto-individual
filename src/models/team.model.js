@@ -1,6 +1,6 @@
 const { DataTypes } = require('sequelize');
 const db = require('../database/db');
-const Universe = require('./universes.model');
+const Universe = require('./universe.model');
 
 const Team = db.define('time', {
   idTime: {
