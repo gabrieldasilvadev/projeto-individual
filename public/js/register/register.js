@@ -57,7 +57,7 @@ function register() {
     return;
   }
 
-  return fetch('http://localhost:3000/users', {
+  return fetch('http://localhost:3000/auth/register', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
