@@ -25,22 +25,20 @@ app.use(
   })
 );
 
-const ONE_DAY = 24 * 60 * 60 * 1000;
-
 app.use(
   session({
-    name: 'session-id',
+    name: 'session',
     secret: 'my-secret',
     resave: false,
-    saveUninitialized: false,
+    saveUninitialized: true,
     store: new FileStore({
       logFn: () => {},
       path: require('path').join(require('os').tmpdir(), 'sessions'),
     }),
     cookie: {
       secure: false,
-      maxAge: ONE_DAY,
-      expires: new Date(Date.now() + ONE_DAY),
+      maxAge: 360000,
+      expires: new Date(Date.now() + 360000),
       httpOnly: true,
     },
   })
@@ -52,14 +50,13 @@ app.use((req, res, next) => {
   if (req.session.userid) {
     res.locals.session = req.session;
   }
-
   next();
 });
 
-// app.use(usersRouter);
-// app.use(postsRouter);
 app.use(authRouter);
 
+// app.use(usersRouter);
+// app.use(postsRouter);
 
 // .sync({ force: true })
 db.sync()
