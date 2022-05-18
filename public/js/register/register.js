@@ -23,6 +23,10 @@ function register() {
   const passwordRegex =
     /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
+  function reloadPage() {
+    window.location.href = 'http://localhost:3000/pages/register-login.html';
+  }
+
   if (
     nome === '' ||
     email === '' ||
@@ -42,7 +46,9 @@ function register() {
   }
 
   if (passwordRegex.test(senha) === false) {
-    alert('Senha invalida');
+    alert(
+      'Sua senha deve conter 1 caracter maisculo e 1 caracter minusculo, 1 caracter especial e 1 numero'
+    );
     return;
   }
 
@@ -65,12 +71,12 @@ function register() {
       senha,
     }),
   })
+    .then(() => {
+      alert('Usuario cadastrado com sucesso');
+      reloadPage();
+    })
     .then((response) => response.json())
     .catch((err) => console.log(err));
 }
-
-$form.addEventListener('submit', (e) => {
-  e.preventDefault();
-});
 
 $btnRegister.addEventListener('click', register);
