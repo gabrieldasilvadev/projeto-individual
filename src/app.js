@@ -30,7 +30,7 @@ app.use(
     name: 'session',
     secret: 'my-secret',
     resave: false,
-    saveUninitialized: true,
+    saveUninitialized: false,
     store: new FileStore({
       logFn: () => {},
       path: require('path').join(require('os').tmpdir(), 'sessions'),
