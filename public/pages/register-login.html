@@ -49,7 +49,12 @@
         <form action="/login" method="POST" class="l-form sign-in">
           <label class="label-register-login">
             <span class="font-body-rg">Email Address</span>
-            <input type="email" name="email" class="input-register-login" />
+            <input
+              type="email"
+              name="email"
+              class="input-register-login"
+              id="input_login_email"
+            />
           </label>
           <label class="label-register-login">
             <span class="font-body-rg">Password</span>
@@ -57,9 +62,14 @@
               type="password"
               name="password"
               class="input-register-login"
+              id="input_login_senha"
             />
           </label>
-          <button class="btn btn-register-login primary-btn" type="button">
+          <button
+            class="btn btn-register-login primary-btn"
+            id="btn_login"
+            type="button"
+          >
             Sign In
           </button>
           <p class="forgot-pass font-body-lg">Forgot Password ?</p>
@@ -219,5 +229,6 @@
       src="../js/register/toggleClassSignup.js"
       defer
     ></script>
+    <script src="../js/login/login.js" defer></script>
   </body>
 </html>
