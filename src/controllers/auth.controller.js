@@ -28,8 +28,7 @@ class AuthController {
 
     if (!passwordMatch) {
       console.log('message', 'Senha incorreta');
-      res.redirect('/login');
-
+      res.redirect('/register');
       return;
     }
 
