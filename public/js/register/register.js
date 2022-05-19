@@ -24,7 +24,7 @@ function register() {
     /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
   function reloadPage() {
-    window.location.href = 'http://localhost:3000/pages/register-login.html';
+    window.location.href = '/';
   }
 
   if (
