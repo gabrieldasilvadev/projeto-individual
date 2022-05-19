@@ -1,0 +1,40 @@
+.l-menu ul li div:hover,
+.l-menu ion-icon:hover {
+  color: var(--color-primary-red01);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.menu-nav--active {
+  display: flex !important;
+}
+
+.l-menu .menu-nav {
+  display: none;
+  position: absolute;
+  align-items: center;
+  flex-direction: column;
+  left: 85%;
+  right: 0;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.l-menu .menu-nav li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 50px;
+  padding: 20px;
+  background: var(--ui-black-03);
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.l-menu .menu-nav li div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
