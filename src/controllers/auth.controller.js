@@ -14,13 +14,12 @@ class AuthController {
 
   static async loginPost(req, res) {
     const { email, senha } = req.body;
-
+    console.log(req.body);
     const user = await userModel.findOne({ where: { email: email } });
 
     if (!user) {
       console.log('message', 'Usuário não encontrado');
       res.redirect('/login');
-
       return;
     }
 
@@ -34,7 +33,6 @@ class AuthController {
 
     req.session.userid = user.id;
     console.log('message', 'Usuário logado com sucesso');
-    req.flash('success', 'Usuário logado com sucesso');
 
     req.session.save(() => {
       res.redirect('/');
