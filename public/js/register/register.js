@@ -57,7 +57,7 @@ function register() {
     return;
   }
 
-  return fetch('http://localhost:3000/register', {
+  return fetch('/register', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -80,3 +80,7 @@ function register() {
 }
 
 $btnRegister.addEventListener('click', register);
+
+const arr1 = fetch('https://reqres.in/api/users')
+  .then((res) => res.json())
+  .then((data) => data);
