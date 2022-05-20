@@ -3,7 +3,7 @@ const $senhaLogin = document.querySelector('#input_login_senha');
 const $btnLogin = document.querySelector('#btn_login');
 
 function login() {
-  fetch('http://localhost:3000/login', {
+  fetch('/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -14,8 +14,7 @@ function login() {
     }),
   })
     .then(() => {
-      alert('Usuario logado com sucesso!');
-      window.location.href = 'http://localhost:3000/';
+      window.location.href = 'http://localhost:3000/pages/register-login.html';
     })
     .then((response) => response.json())
     .catch((err) => console.log(err));
