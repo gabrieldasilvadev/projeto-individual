@@ -19,10 +19,7 @@ class AuthController {
       const user = await userModel.findOne({ where: { email: email } });
 
       if (!user) {
-        // console.log('message', 'Usuário não encontrado');
-        // res.redirect('/login');
         throw new Error('message: Usuário não encontrado');
-        // return;
       }
 
       const passwordMatch = bcrypt.compareSync(senha, user.senha);
@@ -45,15 +42,6 @@ class AuthController {
     }
   }
 
-  // static register(req, res) {
-  //   try {
-  //     const users = userModel.findAll();
-  //     return res.status(200).json(users);
-  //   } catch (error) {
-  //     return res.status(500).json(error.message);
-  //   }
-  // }
-
   static async registerPost(req, res) {
     try {
       const { nome, email, time, universo, nivel, senha } = req.body;
@@ -65,6 +53,11 @@ class AuthController {
       if (checkIfUserExists) {
         throw new Error('message: Email já cadastrado');
       }
+
+      if (!nome || !email || !time || !universo || !nivel || !senha) {
+        throw new Error('message: Preencha todos os campos');
+      }
+
       console.log(req.body);
       const salt = await bcrypt.genSalt(10);
       const hashedPassword = await bcrypt.hash(senha, salt);
