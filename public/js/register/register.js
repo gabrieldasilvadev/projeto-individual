@@ -8,7 +8,7 @@ const $selectTeam = document.querySelector('#select_team');
 const $selectUniverse = document.querySelector('#select_universe');
 const $selectLevel = document.querySelector('#select_level');
 
-function register() {
+async function register() {
   const nome = $name.value.toLowerCase();
   const email = $email.value.toLowerCase();
   const senha = $password.value;
@@ -57,7 +57,7 @@ function register() {
     return;
   }
 
-  return fetch('/register', {
+  const response = await fetch('/register', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -70,17 +70,9 @@ function register() {
       universo,
       senha,
     }),
-  })
-    .then(() => {
-      alert('Usuario cadastrado com sucesso');
-      reloadPage();
-    })
-    .then((response) => response.json())
-    .catch((err) => console.log(err));
+  });
+  const data = await response.json();
+  console.log(data);
 }
 
 $btnRegister.addEventListener('click', register);
-
-const arr1 = fetch('https://reqres.in/api/users')
-  .then((res) => res.json())
-  .then((data) => data);
