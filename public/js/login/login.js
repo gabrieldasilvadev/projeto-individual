@@ -26,24 +26,25 @@ async function login() {
     return;
   }
 
-  fetch('/login', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      email,
-      senha,
-    }),
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      if (data.error) {
-        alert(data.error);
-        return;
-      }
-      console.log(data);
+  try {
+    const response = await fetch('/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        email,
+        senha,
+      }),
     });
+    const data = await response.json();
+  } catch (error) {
+    if (data.error) {
+      alert(data.error);
+      console.log(data);
+      return;
+    }
+  }
 }
 
 $btnLogin.addEventListener('click', login);
