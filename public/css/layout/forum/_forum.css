@@ -1,0 +1,65 @@
+.header-forum {
+  background-color: var(--ui-black-02);
+  width: 100%;
+  height: var(--m-xs);
+  padding: 0 var(--m-xxs);
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--m-xxxxxxs);
+}
+
+.l-forum-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: var(--m-xxxxxxs);
+  margin-bottom: var(--m-xxs);
+}
+
+.l-forum-content {
+  position: relative;
+  background-color: var(--ui-black-02);
+  padding: var(--m-xxxxs) var(--m-xxxxs);
+  width: 100%;
+}
+
+.l-forum-chat {
+  position: relative;
+  height: 100%;
+  margin-bottom: 4em;
+}
+
+.forum-post-comment {
+  position: absolute;
+  width: 70%;
+  bottom: 0;
+  left: 50%;
+  right: 50%;
+  padding: 20px;
+
+  transform: translate(-50%, 0);
+}
+
+.forum-post-comment-form {
+  display: flex;
+  gap: var(--m-xxxxxxs);
+}
+
+.forum-post-comment-input {
+  border-radius: 10px;
+  border: 1px solid var(--ui-black-03);
+  padding: var(--m-xxxxxxs);
+  width: 100%;
+  color: var(--ui-black-03);
+  background-color: var(--ui-white);
+}
+
+.forum-message {
+  background-color: var(--ui-black-03);
+  width: max-content;
+  max-width: 100%;
+  padding: var(--m-xxxxxs);
+  border-radius: 10px;
+  margin-bottom: 1em;
+}
