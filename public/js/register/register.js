@@ -57,22 +57,29 @@ async function register() {
     return;
   }
 
-  const response = await fetch('/register', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      nome,
-      email,
-      time,
-      nivel,
-      universo,
-      senha,
-    }),
-  });
-  const data = await response.json();
-  console.log(data);
+  try {
+    const response = await fetch('/register', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        nome,
+        email,
+        time,
+        nivel,
+        universo,
+        senha,
+      }),
+    });
+    const data = await response.json();
+  } catch (error) {
+    if (data.error) {
+      console.log(data);
+      alert(data.error);
+      return;
+    }
+  }
 }
 
 $btnRegister.addEventListener('click', register);
