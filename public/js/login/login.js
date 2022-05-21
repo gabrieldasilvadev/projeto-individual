@@ -1,8 +1,12 @@
 const $emailLogin = document.querySelector('#input_login_email');
 const $senhaLogin = document.querySelector('#input_login_senha');
 const $btnLogin = document.querySelector('#btn_login');
+const $teste = document.querySelector('#teste');
 
-function login() {
+async function login() {
+  const email = $emailLogin.value;
+  const senha = $senhaLogin.value;
+
   const emailRegex =
     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -28,25 +32,18 @@ function login() {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      email: $emailLogin.value,
-      senha: $senhaLogin.value,
+      email,
+      senha,
     }),
   })
-    .then(() => {
-      window.location.href = 'http://localhost:3000/pages/register-login.html';
-    })
     .then((response) => response.json())
-    .catch((err) => console.log(err));
-
-  fetch('/login', {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  })
-    .then((response) => response.json())
-    .then((data) => console.log(data))
-    .catch((err) => console.log(err));
+    .then((data) => {
+      if (data.error) {
+        alert(data.error);
+        return;
+      }
+      console.log(data);
+    });
 }
 
 $btnLogin.addEventListener('click', login);
