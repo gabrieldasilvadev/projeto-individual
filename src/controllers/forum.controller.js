@@ -12,8 +12,19 @@ class postController {
 
   static async createPost(req, res) {
     try {
-      const newPost = await postModal.create(req.body);
-      return res.status(200).json(newPost);
+      const { post, fkUsuario } = req.body;
+      const usuarioId = await req.session.userid;
+      const newPost = {
+        post,
+        fkUsuario: usuarioId,
+      };
+
+      if (!post) {
+        throw new Error('message: Preencha o campo post');
+      }
+
+      const postCreated = await postModal.create(newPost);
+      return res.status(200).json(postCreated);
     } catch (error) {
       return res.status(500).json(error.message);
     }
