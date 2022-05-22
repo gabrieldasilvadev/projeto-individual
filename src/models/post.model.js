@@ -2,18 +2,18 @@ const { DataTypes } = require('sequelize');
 const db = require('../database/db');
 
 const Post = db.define('post', {
-  idPost: {
-    type: DataTypes.INTEGER,
-    primaryKey: true,
-    autoIncrement: true,
-    allowNull: false,
-  },
-  nome: {
-    type: DataTypes.STRING(60),
-    allowNull: false,
-  },
-  descricao: {
+  post: {
     type: DataTypes.TEXT,
+    allowNull: false,
+  },
+  createdAt: {
+    type: DataTypes.DATE,
+    defaultValue: Date.now,
+    allowNull: false,
+  },
+  updatedAt: {
+    type: DataTypes.DATE,
+    defaultValue: Date.now,
     allowNull: false,
   },
 });
