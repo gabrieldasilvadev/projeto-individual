@@ -74,6 +74,7 @@ class AuthController {
       req.session.userid = newUser.id;
       console.log('success', 'Usuário cadastrado com sucesso');
       req.session.save(() => {
+        console.log('sessao');
         res.redirect('/');
       });
     } catch (error) {
