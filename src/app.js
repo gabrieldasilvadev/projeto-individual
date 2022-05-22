@@ -53,8 +53,15 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(authRouter);
+const indexRouter = require('./routes/index');
+const postRouter = require('./routes/forum.router');
+const authRouter = require('./routes/auth.router');
 
+app.use(indexRouter);
+app.use(authRouter);
+app.use(postRouter);
+
+// Inicia o servidor
 db.sync()
   .then(
     app.listen(port, () =>
