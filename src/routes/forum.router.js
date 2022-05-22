@@ -5,6 +5,6 @@ const postRouter = express.Router();
 const checkAuth = require('../helpers/checkAuth');
 
 postRouter.get('/api/forum', checkAuth, postController.getAllPosts);
-postRouter.post('/api/create', postController.createPost);
+postRouter.post('/api/create-post', checkAuth, postController.createPost);
 
 module.exports = postRouter;
