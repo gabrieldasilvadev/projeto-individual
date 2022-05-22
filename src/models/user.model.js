@@ -56,6 +56,12 @@ User.hasMany(Item, {
   constraints: true,
   foreignKey: 'fkUsuario',
 });
+
+Post.belongsTo(User, {
+  constraints: true,
+  foreignKey: 'fkUsuario',
+});
+
 User.hasMany(Post, {
   constraints: true,
   foreignKey: 'fkUsuario',
