@@ -103,20 +103,22 @@
             </div>
           </div>
           <div class="forum-post-comment">
-            <form class="forum-post-comment-form" <!-- method="POST" -->
+            <div class="forum-post-comment-form">
               <input
                 type="text"
                 name="comment"
                 placeholder="Escreva um comentário..."
                 class="forum-post-comment-input"
+                id="post-comment-input"
               />
               <input type="hidden" name="id_post" />
-              <input type="submit" value="Enviar" class="btn primary-btn" />
-            </form>
+              <button class="btn primary-btn" id="btn-enviar">Enviar</button>
+            </div>
           </div>
         </div>
       </div>
     </main>
+    <script type="text/javascript" src="../js/forum/post.js"></script>
   </body>
 </html>
 <script>
