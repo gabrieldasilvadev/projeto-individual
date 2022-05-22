@@ -72,11 +72,19 @@ async function register() {
         senha,
       }),
     });
-    const data = await response.json();
+    if (response.status === 200) {
+      alert('Cadastro efetuado com sucesso');
+      reloadPage();
+      return;
+    }
+    if (response.status === 500) {
+      alert('Email ja cadastrado');
+      return;
+    }
   } catch (error) {
-    if (data.error) {
+    if (error) {
+      alert(error);
       console.log(data);
-      alert(data.error);
       return;
     }
   }
