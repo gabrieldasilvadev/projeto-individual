@@ -10,20 +10,11 @@ const app = express();
 const port = 3000;
 const db = require('./database/db');
 
-// const usersRouter = require('./routes/user.router');
-// const postsRouter = require('./routes/post.router');
-const authRouter = require('./routes/auth.router');
-
+// Configurações do Express
 app.use(cors());
-
-app.use(express.static('public'));
 app.use(express.json());
 
-app.use(
-  express.urlencoded({
-    extended: true,
-  })
-);
+// Configurações da sessão
 
 app.use(
   session({
@@ -55,10 +46,6 @@ app.use((req, res, next) => {
 
 app.use(authRouter);
 
-// app.use(usersRouter);
-// app.use(postsRouter);
-
-// .sync({ force: true })
 db.sync()
   .then(
     app.listen(port, () =>
