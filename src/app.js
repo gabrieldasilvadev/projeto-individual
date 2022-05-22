@@ -35,6 +35,14 @@ app.use(
   })
 );
 
+app.use(
+  express.urlencoded({
+    extended: true,
+  })
+);
+
+// Configurações do Flash
+
 app.use(flash());
 
 app.use((req, res, next) => {
