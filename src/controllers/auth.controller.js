@@ -25,15 +25,14 @@ class AuthController {
       const passwordMatch = bcrypt.compareSync(senha, user.senha);
 
       if (!passwordMatch) {
-        console.log('message', 'Senha incorreta');
-        res.redirect('/register');
-        return;
+        throw new Error('message: Senha incorreta');
       }
 
       req.session.userid = user.id;
       console.log('message', 'Usuário logado com sucesso');
 
       req.session.save(() => {
+        console.log('sessao');
         res.redirect('/');
       });
     } catch (error) {
