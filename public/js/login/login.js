@@ -1,7 +1,6 @@
 const $emailLogin = document.querySelector('#input_login_email');
 const $senhaLogin = document.querySelector('#input_login_senha');
 const $btnLogin = document.querySelector('#btn_login');
-const $teste = document.querySelector('#teste');
 
 async function login() {
   const email = $emailLogin.value;
