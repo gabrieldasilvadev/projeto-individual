@@ -36,11 +36,20 @@ async function login() {
         senha,
       }),
     });
-    const data = await response.json();
+
+    if (response.status === 200) {
+      alert('Login efetuado com sucesso');
+      window.location.href = '/forum';
+      return;
+    }
+
+    if (response.status === 500) {
+      alert('Email ou senha incorretos');
+      return;
+    }
   } catch (error) {
-    if (data.error) {
-      alert(data.error);
-      console.log(data);
+    if (error) {
+      alert(error);
       return;
     }
   }
