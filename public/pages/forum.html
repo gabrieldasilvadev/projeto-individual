@@ -111,7 +111,7 @@
   function showMessage(text, isMine = false) {
     document.getElementById('l-forum-chat').innerHTML += `
       <div class="message-row ${isMine ? 'mine' : 'theirs'}">
-        <div class="bubble">Voce:  ${text}</div> <br/> <br/>
+        <div class="bubble">Mensagem: ${text}</div> <br/> <br/>
       </div>
     `;
   }
@@ -119,7 +119,6 @@
   ws.addEventListener('message', (ev) => {
     ev.data.text().then(showMessage);
   });
-
   document.querySelector('form').onsubmit = (ev) => {
     ev.preventDefault();
     const input = document.querySelector('input');
