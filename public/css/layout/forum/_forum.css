@@ -24,7 +24,7 @@
   width: 100%;
 }
 
-.l-forum-chat {
+#l-forum-chat {
   position: relative;
   height: 100%;
   margin-bottom: 4em;
@@ -55,11 +55,16 @@
   background-color: var(--ui-white);
 }
 
-.forum-message {
+.l-forum-message {
   background-color: var(--ui-black-03);
   width: max-content;
   max-width: 100%;
   padding: var(--m-xxxxxs);
   border-radius: 10px;
   margin-bottom: 1em;
+}
+
+.post-user-name {
+  margin-bottom: 1em;
+  font-size: 14px;
 }
