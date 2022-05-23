@@ -5,6 +5,8 @@ const session = require('express-session');
 const flash = require('express-flash');
 const { tmpdir } = require('os');
 const FileStore = require('session-file-store')(session);
+const { WebSocketServer } = require('ws');
+const wss = new WebSocketServer({ port: 8080 });
 
 const app = express();
 const port = 3000;
@@ -13,6 +15,14 @@ const db = require('./database/db');
 // Configurações do Express
 app.use(cors());
 app.use(express.json());
+
+wss.on('connection', (client) => {
+  client.on('message', (message, isBinary) => {
+    [...wss.clients]
+      .filter((c) => c !== client)
+      .forEach((c) => c.send(isBinary ? message.toString() : message));
+  });
+});
 
 // Configurações da sessão
 
@@ -45,13 +55,16 @@ app.use(
 
 app.use(flash());
 
-// Rotas da aplicação
+// Configuração da sessão
+
 app.use((req, res, next) => {
   if (req.session.userid) {
     res.locals.session = req.session;
   }
   next();
 });
+
+// Rotas da aplicação
 
 const indexRouter = require('./routes/index');
 const postRouter = require('./routes/forum.router');
