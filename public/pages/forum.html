@@ -13,6 +13,7 @@
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
     <script src="../js/user-logged/toggle-menu.js" defer></script>
+
     <link rel="stylesheet" href="../css/main.css" />
     <title>Forum</title>
   </head>
@@ -82,28 +83,11 @@
       <div class="l-forum-container">
         <div class="header-forum">Chat - Twenty one Pilots</div>
         <div class="l-forum-content">
-          <div class="l-forum-chat">
-            <div class="forum-message">
-              <p style="margin-bottom: 1em; font-size: 14px">
-                Usuario: <span>Gabriel</span>
-              </p>
-              <p>Ola, frens. Stay alive!</p>
-            </div>
-            <div class="forum-message">
-              <p style="margin-bottom: 1em; font-size: 14px">
-                Usuario: <span>Gabriel</span>
-              </p>
-              <p>Ola, frens. Stay alive!</p>
-            </div>
-            <div class="forum-message">
-              <p style="margin-bottom: 1em; font-size: 14px">
-                Usuario: <span>Gabriel</span>
-              </p>
-              <p>Ola, frens. Stay alive!</p>
-            </div>
+          <div id="l-forum-chat">
+            <div id="forum-message" class="message-row"></div>
           </div>
           <div class="forum-post-comment">
-            <div class="forum-post-comment-form">
+            <form class="forum-post-comment-form" id="chat">
               <input
                 type="text"
                 name="comment"
@@ -112,8 +96,10 @@
                 id="post-comment-input"
               />
               <input type="hidden" name="id_post" />
-              <button class="btn primary-btn" id="btn-enviar">Enviar</button>
-            </div>
+              <button type="submit" class="btn primary-btn" id="btn-enviar">
+                Enviar
+              </button>
+            </form>
           </div>
         </div>
       </div>
@@ -121,6 +107,24 @@
     <script type="text/javascript" src="../js/forum/post.js"></script>
   </body>
 </html>
-<script>
-  feather.replace();
+<script type="text/javascript">
+  function showMessage(text, isMine = false) {
+    document.getElementById('l-forum-chat').innerHTML += `
+      <div class="message-row ${isMine ? 'mine' : 'theirs'}">
+        <div class="bubble">Voce:  ${text}</div> <br/> <br/>
+      </div>
+    `;
+  }
+  const ws = new WebSocket('ws://localhost:8080');
+  ws.addEventListener('message', (ev) => {
+    ev.data.text().then(showMessage);
+  });
+
+  document.querySelector('form').onsubmit = (ev) => {
+    ev.preventDefault();
+    const input = document.querySelector('input');
+    ws.send(input.value);
+    showMessage(input.value, true);
+    input.value = '';
+  };
 </script>
