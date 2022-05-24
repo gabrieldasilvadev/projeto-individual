@@ -2,12 +2,7 @@ const itemModal = require('../models/item.model');
 
 class itemController {
   static async getAllItems(req, res) {
-    try {
-      const items = await itemModal.findAll();
-      return res.status(200).json(items);
-    } catch (error) {
-      return res.status(500).json(error.message);
-    }
+    res.send('get all items');
   }
 
   static async getItemById(req, res) {
@@ -42,7 +37,9 @@ class itemController {
     try {
       const searchItem = await itemModal.findByPk(req.params.id);
       await searchItem.destroy(req.params);
-      return res.status(200).json({mensagem: `O item de id ${req.params.id} foi deletado`})
+      return res
+        .status(200)
+        .json({ mensagem: `O item de id ${req.params.id} foi deletado` });
     } catch (error) {
       return res.status(500).json(error.message);
     }
