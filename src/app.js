@@ -7,7 +7,6 @@ const { tmpdir } = require('os');
 const FileStore = require('session-file-store')(session);
 const { WebSocketServer } = require('ws');
 const wss = new WebSocketServer({ port: 8080 });
-
 const app = express();
 const port = 3000;
 const db = require('./database/db');
@@ -69,10 +68,12 @@ app.use((req, res, next) => {
 const indexRouter = require('./routes/index');
 const postRouter = require('./routes/forum.router');
 const authRouter = require('./routes/auth.router');
+const itemRouter = require('./routes/item.router');
 
 app.use(indexRouter);
 app.use(authRouter);
 app.use(postRouter);
+app.use(itemRouter);
 
 // Inicia o servidor
 db.sync()
