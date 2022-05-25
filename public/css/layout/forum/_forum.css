@@ -68,3 +68,14 @@
   margin-bottom: 1em;
   font-size: 14px;
 }
+
+.mine {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#l-forum-chat > .mine:nth-child(odd) {
+  background: var(--ui-black-03);
+}
