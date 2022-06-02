@@ -1,0 +1,47 @@
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: var(--m-xxxxxs);
+}
+
+.user-email {
+  display: flex;
+  flex-direction: column;
+  gap: var(--m-xxxxxxxs);
+}
+
+.user-universe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: var(--m-s);
+
+  cursor: pointer;
+  padding: var(--m-xxxxs);
+  border-radius: 5px;
+  padding: 60px;
+  width: 49%;
+  height: 280px;
+  background-color: var(--ui-black-02);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.user-universe .spotify-playlist {
+  display: flex;
+  align-items: center;
+  gap: var(--m-xxxxxxs);
+}
+
+.user-level hr {
+  border-color: var(--ui-black01);
+  width: 100%;
+  margin-bottom: var(--m-xxxxxs);
+}
+
+.user-universe:hover,
+.user-universe:hover svg path {
+  background-color: #1fcf6b;
+  fill: var(--ui-black01);
+  transition: background-color 0.3s ease-in-out;
+}
