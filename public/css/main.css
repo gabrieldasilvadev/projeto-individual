@@ -34,3 +34,5 @@
 @import url('../css/module/user-logged/_header.css');
 @import url('../css/layout/forum/_forum.css');
 @import url('../css/theme/_white.css');
+@import url('../css/layout/dashboard/_dashboard.css');
+@import url('../css/module/dashboard/_dashboard-info.css');
