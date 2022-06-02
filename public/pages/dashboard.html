@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="SPTech School - Projeto Individual: Aplicação sobre Twenty one Pilots"
+    />
+    <meta name="author" content="Gabriel da Silva" />
+    <link rel="shortcut icon" href="../assets/icon/favicon.svg" />
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="../js/user-logged/toggle-menu.js" defer></script>
+    <link rel="stylesheet" href="../css/main.css" />
+    <title>GBR21Pilots</title>
+  </head>
+  <body class="body">
+    <header id="header">
+      <div class="l-container">
+        <div class="l-header">
+          <h4 class="header__logo">
+            GBR<span class="text-red">21Pilots</span>
+          </h4>
+          <nav class="l-header__nav">
+            <ul class="l-header__nav-list">
+              <li class="header__nav--item">
+                <a href="#"><h6 class="underline-effect">About</h6></a>
+              </li>
+              <li class="header__nav--item">
+                <a href="#"><h6 class="underline-effect">Store</h6></a>
+              </li>
+              <li class="header__nav--item">
+                <a href="#"><h6 class="underline-effect">Contact</h6></a>
+              </li>
+              <li class="header__nav--item">
+                <a href="#"><h6 class="underline-effect">Gallery</h6></a>
+              </li>
+              <li class="header__nav--item">
+                <div class="l-menu">
+                  <ion-icon
+                    class="user-menu"
+                    size="large"
+                    name="person-sharp"
+                  ></ion-icon>
+                  <ul class="menu-nav">
+                    <li>
+                      <div>
+                        <ion-icon size="large" name="dice"></ion-icon
+                        ><a href="#">Items</a>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <ion-icon size="large" name="chatbubbles"></ion-icon
+                        ><a href="#">Forum</a>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <ion-icon size="large" name="create"></ion-icon
+                        ><a href="#">Dashboard</a>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <ion-icon size="large" name="close-sharp"></ion-icon
+                        ><a href="#">Sair</a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="l-container">
+        <div class="l-dashboard-title">
+          <h1>Ola, <span id="user_name">Gabriel</span></h1>
+          <p class="font-body-lg">
+            <span>Estamos felizes em te ver por aqui!</span>
+            <span>Aproveite nossa comunidade. Stay alive</span>
+          </p>
+        </div>
+
+        <div class="l-user-dashboard-team">
+          <div class="l-user-team">
+            <h5>Seu time <span id="user_team">Tyler Joseph</span></h5>
+            <p class="font-body-lg">
+              Função: <span id="function-team">Vocalista</span>
+            </p>
+          </div>
+          <div class="l-read-more">
+            <h5>Saiba mais</h5>
+            <i data-feather="play-circle"></i>
+          </div>
+        </div>
+
+        <div class="l-user-dashboard-info">
+          <div class="l-user-level">
+            <div class="user-profile">
+              <img
+                src="https://via.placeholder.com/100/e924e6"
+                style="border-radius: 50%"
+                alt=""
+              />
+              <div class="user-email">
+                <h5>Meu perfil</h6>
+                <p class="font-body-reg" id="user_email">
+                  gabrieldasilva@gmail.com
+                </p>
+              </div>
+            </div>
+            <div class="user-level">
+              <hr>
+              <h6>Seu nível: <span id="user_level">Intermediário</span></h6>
+            </div>
+          </div>
+          <div class="user-universe">
+            <h5>Seu universo: <span id="user_universe">Blurryface</span></h5>
+            <div class="spotify-playlist">
+              <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 0C9 0 0 9 0 20C0 31 9 40 20 40C31 40 40 31 40 20C40 9 31 0 20 0ZM27.885 30C27.5183 30 27.335 29.8167 26.9683 29.6333C24.2183 27.9817 20.735 27.0667 17.0683 27.0667C15.0517 27.0667 12.8517 27.4333 11.0183 27.8C10.6517 27.8 10.285 27.9833 10.1017 27.9833C9.36833 27.9833 8.81833 27.4333 8.81833 26.7C8.81833 25.9667 9.185 25.4167 9.91833 25.4167C12.3017 24.8667 14.6867 24.5 17.2533 24.5C21.47 24.5 25.32 25.6 28.62 27.4333C28.9867 27.8 29.3533 27.9833 29.3533 28.7167C28.9833 29.6333 28.4333 30 27.885 30ZM29.9 24.8683C29.5333 24.8683 29.1667 24.685 28.8 24.5017C25.6833 22.485 21.2817 21.385 16.5167 21.385C14.1333 21.385 11.9317 21.7517 10.2833 22.1183C9.91667 22.3017 9.73333 22.3017 9.36667 22.3017C8.45 22.3017 7.89833 21.5683 7.89833 20.8333C7.89833 19.9167 8.265 19.55 9.18167 19.1817C11.3817 18.6317 13.5833 18.0817 16.7 18.0817C21.8333 18.0817 26.6 19.365 30.635 21.7483C31.185 22.115 31.5517 22.665 31.5517 23.2167C31.3667 24.1333 30.8183 24.8683 29.9 24.8683ZM32.2833 19C31.9167 19 31.7333 18.8167 31.1833 18.6333C27.5167 16.6167 22.2 15.3333 17.0667 15.3333C14.5 15.3333 11.75 15.7 9.365 16.25C8.99833 16.25 8.815 16.4333 8.265 16.4333C7.165 16.6183 6.43167 15.7 6.43167 14.6017C6.43167 13.5033 6.98167 12.95 7.715 12.7683C10.65 12.0333 13.7667 11.6667 17.0667 11.6667C22.75 11.6667 28.6167 12.95 33.2017 15.3333C33.7517 15.7 34.3017 16.25 34.3017 17.1667C34.1183 18.2667 33.3833 19 32.2833 19Z" fill="#1FCF6B"/>
+              </svg>
+              <h6>Abre o seu universo!</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script>
+    feather.replace();
+  </script>
+</html>
