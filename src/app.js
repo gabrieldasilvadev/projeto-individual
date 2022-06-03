@@ -69,11 +69,13 @@ const indexRouter = require('./routes/index');
 const postRouter = require('./routes/forum.router');
 const authRouter = require('./routes/auth.router');
 const itemRouter = require('./routes/item.router');
+const userRouter = require('./routes/user.router');
 
 app.use(indexRouter);
 app.use(authRouter);
 app.use(postRouter);
 app.use(itemRouter);
+app.use(userRouter);
 // app.use(dashboardRouter)
 
 // Inicia o servidor
