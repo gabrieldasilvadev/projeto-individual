@@ -19,16 +19,6 @@ class UserController {
     }
   }
 
-  // static async createUser(req, res) {
-  //   try {
-  //     console.log(req.body);
-  //     const newUser = await userModel.create(req.body);
-  //     return res.status(200).json(newUser);
-  //   } catch (error) {
-  //     return res.status(500).json(error.message);
-  //   }
-  // }
-
   static async updateUser(req, res) {
     try {
       const user = await userModel.findByPk(req.params.id);
