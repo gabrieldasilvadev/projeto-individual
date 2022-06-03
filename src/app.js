@@ -38,7 +38,7 @@ app.use(
     cookie: {
       secure: false,
       maxAge: 360000,
-      expires: new Date(Date.now() + 360000),
+      expires: new Date(Date.now() + 86400000),
       httpOnly: true,
     },
   })
@@ -74,6 +74,7 @@ app.use(indexRouter);
 app.use(authRouter);
 app.use(postRouter);
 app.use(itemRouter);
+// app.use(dashboardRouter)
 
 // Inicia o servidor
 db.sync()
