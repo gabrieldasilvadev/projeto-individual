@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <title>How to Design Login & Registration Form Transition</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" href="../assets/icon/favicon.svg" />
@@ -10,8 +9,9 @@
       src="../js/register/register.js"
       defer
     ></script>
+    <script src="../js/header.js" defer></script>
     <link rel="stylesheet" href="../css/main.css" />
-    <title>Register/Login</title>
+    <title>Entrar</title>
   </head>
   <body class="body-register-login">
     <header id="header">
@@ -23,21 +23,21 @@
           <nav class="l-header__nav">
             <ul class="l-header__nav-list">
               <li class="header__nav--item">
-                <a href="#"><h6 class="underline-effect">About</h6></a>
+                <a href="#"><h6 class="underline-effect">Sobre</h6></a>
               </li>
               <li class="header__nav--item">
-                <a href="#"><h6 class="underline-effect">Store</h6></a>
+                <a href="#"><h6 class="underline-effect">Items</h6></a>
               </li>
               <li class="header__nav--item">
-                <a href="#"><h6 class="underline-effect">Contact</h6></a>
+                <a href="#"><h6 class="underline-effect">Contato</h6></a>
               </li>
               <li class="header__nav--item">
-                <a href="#"><h6 class="underline-effect">Gallery</h6></a>
+                <a href="#"><h6 class="underline-effect">Galeria</h6></a>
               </li>
               <li class="header__nav--item">
-                <button class="btn primary-btn">
-                  <span>Enter</span>
-                </button>
+                <a href="/auth">
+                  <button class="btn primary-btn">Entrar</button>
+                </a>
               </li>
             </ul>
           </nav>
