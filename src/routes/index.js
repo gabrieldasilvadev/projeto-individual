@@ -1,5 +1,4 @@
 const express = require('express');
-const app = require('../app');
 const checkAuth = require('../helpers/checkAuth');
 const indexRouter = require('express').Router();
 
