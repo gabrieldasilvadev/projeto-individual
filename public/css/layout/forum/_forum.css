@@ -29,6 +29,7 @@
   position: relative;
   height: 100%;
   margin-bottom: 4em;
+  padding: 20px;
   overflow-y: scroll;
 }
 
@@ -38,7 +39,6 @@
   bottom: 0;
   left: 50%;
   right: 50%;
-  padding: 20px;
   transform: translate(-50%, 0);
 }
 
