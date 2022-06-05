@@ -2,7 +2,7 @@ const express = require('express');
 const checkAuth = require('../helpers/checkAuth');
 const indexRouter = require('express').Router();
 
-indexRouter.use('/forum', checkAuth, express.static('public/pages/forum.html'));
+indexRouter.use('/chat', checkAuth, express.static('public/pages/forum.html'));
 indexRouter.use('/pages', checkAuth, (req, res) => {
   res.redirect('/');
   return;
