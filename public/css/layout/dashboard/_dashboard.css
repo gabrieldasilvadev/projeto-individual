@@ -54,3 +54,21 @@
   border-radius: 5px;
   background-color: var(--ui-black-02);
 }
+
+.l-chart {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  border-radius: 5px;
+  width: 90%;
+  gap: var(--m-xxxxxs);
+  background-color: var(--ui-black-02);
+}
+
+.chart-content {
+  width: 50%;
+  padding: 40px;
+  border-radius: 10px;
+  margin: auto;
+  background-color: var(--ui-black-03);
+}
