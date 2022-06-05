@@ -21,11 +21,11 @@ async function post() {
     });
     $postInput.value = '';
     if (response.ok === 200) {
-      window.location.href = '/forum';
+      window.location.href = '/chat';
       return;
     }
     if (response.status === 500) {
-      window.location.href = '/forum';
+      window.location.href = '/chat';
       return;
     }
   } catch (error) {
