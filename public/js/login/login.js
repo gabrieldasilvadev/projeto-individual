@@ -38,8 +38,17 @@ async function login() {
     });
 
     if (response.status === 200) {
-      alert('Login efetuado com sucesso');
-      window.location.href = '/forum';
+      Swal.fire({
+        title: 'Login realizado com sucesso',
+        text: 'Você será redirecionado para o Chat!',
+        icon: 'success',
+        showConfirmButton: false,
+        timer: 1500,
+      });
+      setInterval(() => {
+        window.location.href = '/chat';
+      }, 2000);
+
       return;
     }
 
