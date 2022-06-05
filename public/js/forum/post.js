@@ -21,12 +21,10 @@ async function post() {
     });
     $postInput.value = '';
     if (response.ok === 200) {
-      alert('Post enviado!');
       window.location.href = '/forum';
       return;
     }
     if (response.status === 500) {
-      alert('Erro ao realizar o post!');
       window.location.href = '/forum';
       return;
     }
@@ -36,5 +34,22 @@ async function post() {
     return;
   }
 }
-
+function showMessage(text, isMine = false) {
+  document.getElementById('l-forum-chat').innerHTML += `
+      <div class="message-row ${isMine ? 'mine' : 'theirs'}">
+        <div class="bubble" >Mensagem: ${text}</div> <br/> <br/>
+      </div>
+    `;
+}
+const ws = new WebSocket('ws://localhost:3000');
+ws.addEventListener('message', (ev) => {
+  ev.data.text().then(showMessage);
+});
+document.querySelector('form').onsubmit = (ev) => {
+  ev.preventDefault();
+  const input = document.querySelector('input');
+  ws.send(input.value);
+  showMessage(input.value, true);
+  input.value = '';
+};
 $btnEnviar.addEventListener('click', post);
