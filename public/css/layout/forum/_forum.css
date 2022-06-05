@@ -22,12 +22,14 @@
   background-color: var(--ui-black-02);
   padding: var(--m-xxxxs) var(--m-xxxxs);
   width: 100%;
+  height: 70vh;
 }
 
 #l-forum-chat {
   position: relative;
   height: 100%;
   margin-bottom: 4em;
+  overflow-y: scroll;
 }
 
 .forum-post-comment {
@@ -37,7 +39,6 @@
   left: 50%;
   right: 50%;
   padding: 20px;
-
   transform: translate(-50%, 0);
 }
 
