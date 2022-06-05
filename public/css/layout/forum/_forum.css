@@ -70,13 +70,15 @@
   font-size: 14px;
 }
 
-.mine {
+.mine,
+.theirs {
   display: flex;
   align-items: center;
   padding: 10px;
   border-radius: 5px;
 }
 
-#l-forum-chat > .mine:nth-child(odd) {
+#l-forum-chat > .mine:nth-child(odd),
+#l-forum-chat > .theirs:nth-child(odd) {
   background: var(--ui-black-03);
 }
