@@ -8,17 +8,13 @@
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
     ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
     <script src="../js/user-logged/toggle-menu.js" defer></script>
     <script src="../js/header.js" defer></script>
     <link rel="stylesheet" href="../css/main.css" />
     <title>Forum</title>
   </head>
   <body>
-    <header id="header">
+    <header id="header" style="position: static">
       <div class="l-container">
         <div class="l-header">
           <h4 class="header__logo">
@@ -45,7 +41,7 @@
                     size="large"
                     name="person-sharp"
                   ></ion-icon>
-                  <ul class="menu-nav">
+                  <ul class="menu-nav" style="z-index: 999">
                     <li>
                       <div>
                         <ion-icon size="large" name="dice"></ion-icon
@@ -81,49 +77,27 @@
 
     <main class="l-container">
       <div class="l-forum-container">
-        <div class="header-forum">Chat - Twenty one Pilots</div>
         <div class="l-forum-content">
           <ul id="l-forum-chat">
             <li id="forum-message" class="message-row"></li>
           </ul>
-          <div class="forum-post-comment">
-            <form class="forum-post-comment-form" id="chat">
-              <input
-                type="text"
-                name="comment"
-                placeholder="Escreva um comentário..."
-                class="forum-post-comment-input"
-                id="post-comment-input"
-              />
-              <input type="hidden" name="id_post" />
-              <button type="submit" class="btn primary-btn" id="btn-enviar">
-                Enviar
-              </button>
-            </form>
-          </div>
+          <div class="forum-post-comment"></div>
+          <form class="forum-post-comment-form" id="chat">
+            <input
+              type="text"
+              name="comment"
+              placeholder="Escreva um comentário..."
+              class="forum-post-comment-input"
+              id="post-comment-input"
+            />
+            <input type="hidden" name="id_post" />
+            <button type="submit" class="btn primary-btn" id="btn-enviar">
+              Enviar
+            </button>
+          </form>
         </div>
       </div>
     </main>
     <script type="text/javascript" src="../js/forum/post.js"></script>
   </body>
 </html>
-<script type="text/javascript">
-  function showMessage(text, isMine = false) {
-    document.getElementById('l-forum-chat').innerHTML += `
-      <div class="message-row ${isMine ? 'mine' : 'theirs'}">
-        <div class="bubble">Mensagem: ${text}</div> <br/> <br/>
-      </div>
-    `;
-  }
-  const ws = new WebSocket('ws://localhost:8080');
-  ws.addEventListener('message', (ev) => {
-    ev.data.text().then(showMessage);
-  });
-  document.querySelector('form').onsubmit = (ev) => {
-    ev.preventDefault();
-    const input = document.querySelector('input');
-    ws.send(input.value);
-    showMessage(input.value, true);
-    input.value = '';
-  };
-</script>
