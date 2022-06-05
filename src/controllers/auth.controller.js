@@ -3,19 +3,9 @@ const userModel = require('../models/user.model');
 const bcrypt = require('bcryptjs');
 
 class AuthController {
-  static async list(req, res) {
-    try {
-      const users = await userModel.findAll();
-      return res.status(200).json(users);
-    } catch (error) {
-      return res.status(500).json(error);
-    }
-  }
-
   static async loginPost(req, res) {
     try {
       const { email, senha } = req.body;
-      // console.log(req.body);
       const user = await userModel.findOne({ where: { email: email } });
 
       if (!user) {
@@ -30,9 +20,7 @@ class AuthController {
 
       req.session.userid = user.id;
       console.log('message', 'Usuário logado com sucesso');
-
       req.session.save(() => {
-        // console.log('sessao');
         res.redirect('/');
       });
     } catch (error) {
@@ -57,7 +45,6 @@ class AuthController {
         throw new Error('message: Preencha todos os campos');
       }
 
-      // console.log(req.body);
       const salt = await bcrypt.genSalt(10);
       const hashedPassword = await bcrypt.hash(senha, salt);
       const newUser = {
@@ -74,7 +61,6 @@ class AuthController {
       req.session.userid = newUser.id;
       console.log('success', 'Usuário cadastrado com sucesso');
       req.session.save(() => {
-        // console.log('sessao');
         res.redirect('/');
       });
     } catch (error) {
