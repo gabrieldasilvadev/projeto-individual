@@ -15,10 +15,11 @@
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
     ></script>
-    <script src="../js/dashboard/main.js" defer></script>
+    <script src="../js/dashboard/chart.js" defer></script>
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="../js/user-logged/toggle-menu.js" defer></script>
     <script src="../js/header.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
     <link rel="stylesheet" href="../css/main.css" />
     <title>GBR21Pilots</title>
   </head>
@@ -139,6 +140,16 @@
         </div>
       </div>
     </main>
+    <section class="l-chart l-container">
+      <div class="chart-content">
+        <h4 style="text-align: center;">Usuários por Universo</h4>
+        <canvas id="universeChart"></canvas>
+      </div>
+      <div class="chart-content">
+        <h4 style="text-align: center;">Usuários por Time</h4>
+        <canvas id="teamChart" style="margin-top: 10% !important;"></canvas>
+      </div>
+    </section>
   </body>
   <script>
     feather.replace();
