@@ -76,7 +76,6 @@ app.use(authRouter);
 app.use(postRouter);
 app.use(itemRouter);
 app.use(userRouter);
-// app.use(dashboardRouter)
 
 // Inicia o servidor
 db.sync()
