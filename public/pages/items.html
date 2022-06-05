@@ -8,14 +8,79 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/main.css" />
     <script src="../js/header.js" defer></script>
+    <script src="../js/user-logged/toggle-menu.js" defer></script>
     <script src="js/script.js" defer></script>
   </head>
   <body>
+    <header id="header">
+      <div class="l-container">
+        <div class="l-header">
+          <h4 class="header__logo">
+            GBR<span class="text-red">21Pilots</span>
+          </h4>
+          <nav class="l-header__nav">
+            <ul class="l-header__nav-list">
+              <li class="header__nav--item">
+                <a href="#"><h6 class="underline-effect">Sobre</h6></a>
+              </li>
+              <li class="header__nav--item">
+                <a href="#"><h6 class="underline-effect">Items</h6></a>
+              </li>
+              <li class="header__nav--item">
+                <a href="#"><h6 class="underline-effect">Contato</h6></a>
+              </li>
+              <li class="header__nav--item">
+                <a href="#"><h6 class="underline-effect">Galeria</h6></a>
+              </li>
+              <li class="header__nav--item">
+                <div class="l-menu">
+                  <ion-icon
+                    class="user-menu"
+                    size="large"
+                    name="person-sharp"
+                  ></ion-icon>
+                  <ul class="menu-nav">
+                    <li>
+                      <div>
+                        <ion-icon size="large" name="dice"></ion-icon
+                        ><a href="/items">Items</a>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <ion-icon size="large" name="chatbubbles"></ion-icon
+                        ><a href="/chat">Chat</a>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <ion-icon size="large" name="create"></ion-icon
+                        ><a href="/dashboard">Dashboard</a>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <ion-icon size="large" name="close-sharp"></ion-icon
+                        ><a href="http://localhost:3000/api/logout">Sair</a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
     <div class="container">
-      <h3 class="title color-white">organic products</h3>
+      <h3 class="title color-white">Escolha seu item</h3>
 
       <div class="products-container">
         <div class="product" data-name="p-1">
