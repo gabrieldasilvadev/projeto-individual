@@ -5,7 +5,7 @@ async function post() {
   const post = $postInput.value;
 
   if (post === '') {
-    alert('O campo esta vazio!');
+    console.log('O campo esta vazio!');
     return;
   }
 
@@ -37,11 +37,16 @@ async function post() {
 function showMessage(text, isMine = false) {
   document.getElementById('l-forum-chat').innerHTML += `
       <div class="message-row ${isMine ? 'mine' : 'theirs'}">
-        <div class="bubble" >Mensagem: ${text}</div> <br/> <br/>
+      ${
+        isMine === true
+          ? `<div class="bubble" >Você: ${text}</div> <br/> <br/>`
+          : `<div class="bubble" >Outros: ${text}</div> <br/> <br/>`
+      }
       </div>
     `;
 }
-const ws = new WebSocket('ws://localhost:3000');
+
+const ws = new WebSocket('ws://localhost:8080');
 ws.addEventListener('message', (ev) => {
   ev.data.text().then(showMessage);
 });
