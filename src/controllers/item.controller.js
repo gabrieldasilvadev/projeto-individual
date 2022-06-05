@@ -11,7 +11,7 @@ class itemController {
       return res.status(200).json(item);
     } catch (error) {
       return res.status(500).json(error.message);
-    }
+    } 
   }
 
   static async createItem(req, res) {
