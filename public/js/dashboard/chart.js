@@ -1,4 +1,4 @@
-async function getUserData() {
+async function createMetrics() {
   const response = await fetch('/api/users');
   const user = await response.json();
 
@@ -148,4 +148,4 @@ async function getUserData() {
   const universeChat = new Chart(ctxUniverse, configUniverse);
   const teamChat = new Chart(ctxTeam, configTeam);
 }
-getUserData();
+createMetrics();
