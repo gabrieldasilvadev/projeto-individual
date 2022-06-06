@@ -1,9 +1,12 @@
 const postModal = require('../models/post.model');
+const userModel = require('../models/user.model');
 
 class postController {
   static async getAllPosts(req, res) {
     try {
-      const posts = await postModal.findAll();
+      const posts = await postModal.findAll({
+        include: [{ model: userModel, attributes: ['nome'] }],
+      });
       return res.status(200).json(posts);
     } catch (error) {
       return res.status(500).json(error.message);
