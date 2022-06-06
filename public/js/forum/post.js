@@ -34,16 +34,25 @@ async function post() {
     return;
   }
 }
+
 function showMessage(text, isMine = false) {
-  document.getElementById('l-forum-chat').innerHTML += `
+  async function getUserName() {
+    const response = await fetch('/dashboard-get');
+    const user = await response.json();
+    const userName = user.nomeUsuario;
+    document.getElementById('l-forum-chat').innerHTML += `
       <div class="message-row ${isMine ? 'mine' : 'theirs'}">
       ${
         isMine === true
-          ? `<div class="bubble" >Você: ${text}</div> <br/> <br/>`
+          ? `<div class="bubble" >${
+              userName[0].toUpperCase() + userName.substring(1)
+            }: ${text}</div> <br/> <br/>`
           : `<div class="bubble" >Outros: ${text}</div> <br/> <br/>`
       }
       </div>
     `;
+  }
+  getUserName();
 }
 
 const ws = new WebSocket('ws://localhost:8080');
