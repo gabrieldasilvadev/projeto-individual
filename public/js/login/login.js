@@ -14,14 +14,25 @@ async function login() {
 
   // validar email com regex
   if (emailRegex.test($emailLogin.value) === false) {
-    alert('Email invalido');
+    Swal.fire({
+      title: 'Erro ao realizar o login',
+      text: 'Email invalido!',
+      icon: 'warning',
+      showConfirmButton: false,
+      timer: 2000,
+    });
     return;
   }
 
   if (passwordRegex.test($senhaLogin.value) === false) {
-    alert(
-      'Sua senha deve conter 1 caracter maisculo e 1 caracter minusculo, 1 caracter especial e 1 numero'
-    );
+    Swal.fire({
+      title: 'Erro ao realizar o login',
+      text: 'Sua senha deve conter 1 carácter maiúsculo e 1 carácter minusculo, 1 carácter especial e 1 numero',
+      icon: 'warning',
+      showConfirmButton: false,
+      timer: 2000,
+    });
+
     return;
   }
 
@@ -53,12 +64,18 @@ async function login() {
     }
 
     if (response.status === 500) {
-      alert('Email ou senha incorretos');
+      Swal.fire({
+        title: 'Erro ao realizar o login',
+        text: 'Email ou senha incorretos',
+        icon: 'warning',
+        showConfirmButton: false,
+        timer: 2000,
+      });
       return;
     }
   } catch (error) {
     if (error) {
-      alert(error);
+      console.log(error);
       return;
     }
   }
