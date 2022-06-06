@@ -15,21 +15,21 @@
       <div class="l-container">
         <div class="l-header">
           <h4 class="header__logo">
-            GBR<span class="text-red">21Pilots</span>
+            <a href="/">GBR<span class="text-red">21Pilots</span></a>
           </h4>
           <nav class="l-header__nav">
             <ul class="l-header__nav-list">
               <li class="header__nav--item">
-                <a href="#"><h6 class="underline-effect">Sobre</h6></a>
+                <a href="/sobre"><h6 class="underline-effect">Sobre</h6></a>
               </li>
               <li class="header__nav--item">
-                <a href="#"><h6 class="underline-effect">Items</h6></a>
+                <a href="/items"><h6 class="underline-effect">Items</h6></a>
               </li>
               <li class="header__nav--item">
-                <a href="#"><h6 class="underline-effect">Contato</h6></a>
+                <a href="/contato"><h6 class="underline-effect">Contato</h6></a>
               </li>
               <li class="header__nav--item">
-                <a href="#"><h6 class="underline-effect">Galeria</h6></a>
+                <a href="/galeria"><h6 class="underline-effect">Galeria</h6></a>
               </li>
               <li class="header__nav--item">
                 <a href="/auth">
@@ -45,7 +45,7 @@
       <main class="l-container cont">
         <form action="/login" method="POST" class="l-form sign-in">
           <label class="label-register-login">
-            <span class="font-body-rg">Email Address</span>
+            <span class="font-body-rg">E-mail</span>
             <input
               type="email"
               name="email"
@@ -54,7 +54,7 @@
             />
           </label>
           <label class="label-register-login">
-            <span class="font-body-rg">Password</span>
+            <span class="font-body-rg">Senha</span>
             <input
               type="password"
               name="password"
@@ -67,9 +67,9 @@
             id="btn_login"
             type="button"
           >
-            Sign In
+            Entrar
           </button>
-          <p class="forgot-pass font-body-lg">Forgot Password ?</p>
+          <p class="forgot-pass font-body-lg">Esqueceu a senha ?</p>
 
           <div class="social-media">
             <ul>
@@ -84,27 +84,31 @@
         <div class="sub-cont">
           <div class="img">
             <div class="img-text m-up">
-              <h2>New here?</h2>
-              <p class="font-body-lg">
-                Sign up and discover great amount of new opportunities!
-              </p>
+              <h2 style="text-transform: initial; text-align: left">
+                Novo aqui fren?
+              </h2>
+              <h5 class="font-body-lg" style="text-align: left">
+                Inscreva-se e descubra uma comunidade incrível!
+              </h5>
             </div>
             <div class="img-text m-in">
-              <h2>One of us?</h2>
-              <p class="font-body-lg">
-                If you already has an account, just sign in. We've missed you!
-              </p>
+              <h2 style="text-transform: initial; text-align: left">
+                Já é um bandito?
+              </h2>
+              <h5 class="font-body-lg" style="text-align: left">
+                Se você já tem uma conta, basta fazer login. Sentimos sua falta!
+              </h5>
             </div>
             <div id="teste"></div>
             <div class="img-btn">
-              <span class="m-up font-body-rg">Sign Up</span>
-              <span class="m-in font-body-rg">Sign In</span>
+              <span class="m-up font-body-rg">Cadastrar</span>
+              <span class="m-in font-body-rg">Entrar</span>
             </div>
           </div>
           <form class="l-form sign-up" id="form_register">
             <div class="l-divisor">
               <label class="label-register-login">
-                <span class="font-body-rg">Name</span>
+                <span class="font-body-rg">Nome</span>
                 <input
                   type="text"
                   class="input-register-login"
@@ -112,7 +116,7 @@
                 />
               </label>
               <label class="label-register-login">
-                <span class="font-body-rg">Email</span>
+                <span class="font-body-rg">E-mail</span>
                 <input
                   type="email"
                   class="input-register-login"
@@ -153,7 +157,7 @@
             </label>
             <div class="l-divisor">
               <label class="label-register-login">
-                <span class="font-body-rg">Password</span>
+                <span class="font-body-rg">Senha</span>
                 <input
                   type="password"
                   class="input-register-login"
@@ -161,7 +165,7 @@
                 />
               </label>
               <label class="label-register-login">
-                <span class="font-body-rg">Confirm Password</span>
+                <span class="font-body-rg">Confirmar senha</span>
                 <input
                   type="password"
                   class="input-register-login"
@@ -174,7 +178,7 @@
               id="btn_register"
               class="btn btn-register-login secundary-btn font-body-rg"
             >
-              Sign Up Now
+              Inscreva-se
             </button>
           </form>
         </div>
@@ -186,31 +190,27 @@
           <div class="l-footer-container">
             <div class="l-contact">
               <div class="email">
-                <h6>say hello to:</h6>
+                <h6>Diga olá para:</h6>
                 <h5>gabriel.dsilva@sptech.school</h5>
               </div>
               <div class="l-keep-in-touch">
-                <h6>keep in touch</h6>
-                <input
-                  type="text"
-                  placeholder="Email Address"
-                  class="input_email"
-                />
-                <input class="btn secundary-btn" type="submit" value="Submit" />
+                <h6>mantenha contato:</h6>
+                <input type="text" placeholder="Email" class="input_email" />
+                <input class="btn secundary-btn" type="submit" value="Enviar" />
               </div>
             </div>
             <div class="l-map-site">
-              <h4>MAP SITE</h4>
+              <h4>MAPA DO SITE</h4>
               <ul class="map-site--list">
                 <div class="list-left">
-                  <li><h6>Home</h6></li>
-                  <li><h6>About</h6></li>
-                  <li><h6>Store</h6></li>
+                  <li><h6>Pagina inicial</h6></li>
+                  <li><h6>Sobre</h6></li>
+                  <li><h6>Items</h6></li>
                 </div>
                 <div class="list-right">
-                  <li><h6>Contact</h6></li>
-                  <li><h6>Gallery</h6></li>
-                  <li><h6>Register</h6></li>
+                  <li><h6>Contato</h6></li>
+                  <li><h6>Galeria</h6></li>
+                  <li><h6>Entre</h6></li>
                 </div>
               </ul>
               <p class="address font-body-lg">
