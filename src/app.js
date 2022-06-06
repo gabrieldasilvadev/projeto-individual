@@ -3,7 +3,6 @@ const express = require('express');
 const cors = require('cors');
 const session = require('express-session');
 const flash = require('express-flash');
-const { tmpdir } = require('os');
 const FileStore = require('session-file-store')(session);
 const { WebSocketServer } = require('ws');
 const wss = new WebSocketServer({ port: 8080 });
@@ -70,12 +69,14 @@ const postRouter = require('./routes/forum.router');
 const authRouter = require('./routes/auth.router');
 const itemRouter = require('./routes/item.router');
 const userRouter = require('./routes/user.router');
+const dashboardRouter = require('./routes/dashboard.router');
 
 app.use(indexRouter);
 app.use(authRouter);
 app.use(postRouter);
 app.use(itemRouter);
 app.use(userRouter);
+app.use(dashboardRouter);
 
 // Inicia o servidor
 db.sync()
@@ -84,6 +85,6 @@ db.sync()
       console.log(`Servidor rodando na porta: http://localhost:${port}`)
     )
   )
-  .catch((err) => console.log(err));
+  .catch((error) => console.log(error));
 
 module.exports = app;
