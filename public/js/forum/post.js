@@ -55,7 +55,7 @@ function showMessage(text, isMine = false) {
   getUserName();
 }
 
-const ws = new WebSocket('ws://localhost:8080');
+const ws = new WebSocket('ws://localhost:3001');
 ws.addEventListener('message', (ev) => {
   ev.data.text().then(showMessage);
 });
