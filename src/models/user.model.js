@@ -40,6 +40,10 @@ const User = db.define('usuario', {
     type: DataTypes.STRING(45),
     allowNull: false,
   },
+  image: {
+    type: DataTypes.STRING,
+    allowNull: true,
+  },
   createdAt: {
     type: DataTypes.DATE,
     defaultValue: Date.now,
