@@ -3,7 +3,9 @@ const userModel = require('../models/user.model');
 class UserController {
   static async getAllUsers(req, res) {
     try {
-      const users = await userModel.findAll();
+      const users = await userModel.findAll({
+        attributes: ['id', 'nome', 'email', 'universo', 'time', 'nivel'],
+      });
       return res.status(200).json(users);
     } catch (error) {
       return res.status(500).json(error.message);
@@ -36,6 +38,28 @@ class UserController {
       return res
         .status(200)
         .json({ mensagem: `O usuario de id ${req.params.id} foi deletado!` });
+    } catch (error) {
+      return res.status(500).json(error.message);
+    }
+  }
+
+  static async uploadImage(req, res) {
+    try {
+      const { email, image } = req.body;
+      const user = await userModel.findOne({ where: { email: email } });
+      await user.update({ image: image });
+      return res.status(200).json(user);
+    } catch (error) {
+      return res.status(500).json(error.message);
+    }
+  }
+
+  static async getImage(req, res) {
+    try {
+      const usuarioId = await req.session.userid;
+      const user = await userModel.findOne({ where: { id: usuarioId } });
+      const imageUser = user.image;
+      return res.status(200).json(imageUser);
     } catch (error) {
       return res.status(500).json(error.message);
     }
