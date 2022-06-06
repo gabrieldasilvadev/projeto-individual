@@ -8,3 +8,16 @@ window.onscroll = () => {
     : (header.style.backgroundColor = 'transparent') &&
       (header.style.boxShadow = 'none');
 };
+
+const $btnAuth = document.getElementById('header_btn_auth');
+const $headerNavItem = document.getElementById('header_nav_item');
+async function userLogged() {
+  const response = await fetch('/dashboard-get');
+  const data = await response.json();
+  if (data.nomeUsuario) {
+    $headerNavItem.style.display = 'block';
+    $btnAuth.style.display = 'none';
+  }
+}
+
+userLogged();
