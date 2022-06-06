@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="shortcut icon" href="assets/icon/favicon.svg" />
     <script src="./js/header.js" async></script>
+    <script src="./js/home/home.js" defer></script>
     <title>GBR21Pilots</title>
   </head>
   <body>
@@ -100,11 +101,7 @@
               twenty <span class="text-red">one pilots</span>
             </h2>
             <p class="font-body-lg">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi duis
-              elementum pharetra dui arcu. Egestas est suscipit vel congue purus
-              facilisis nisl vel. Urna elementum tellus vestibulum mauris, sed
-              velit. Pellentesque faucibus urna mattis dictum congue neque,
-              velit ornare.F
+              Twenty One Pilots (estilizado como TWENTY ØNE PILØTS e abreviado como TØP) é um duo norte americano que se originou na cidade de Ohio, Columbus. A banda foi formada em 2009 e é composta pelos integrantes Tyler Joseph e Josh Dun.
             </p>
 
             <button class="btn primary-btn">Saiba Mais</button>
@@ -136,20 +133,19 @@
       <div class="l-container l-members punchline">
         <h1 class="members-title headline">membros</h1>
         <div class="l-members-container">
-          <img src="assets/img/members/mask-josh.png" class="lozad" alt="" />
+          <img src="assets/img/members/mask-tyler.png" class="lozad" alt="" id="info_image"/>
           <div class="member-info">
-            <ul class="member-info-list font-body-lg">
-              <li class="tagline">Name: Tyler Joseph</li>
-              <li class="tagline">Function: Vocalist</li>
-              <li class="tagline">Age: 33 years old</li>
-              <li class="tagline">Born in Columbus, Ohio - EUA</li>
-              <li class="tagline">MBTI: INFP</li>
-              <li class="tagline">Spouse: Jenna Joseph</li>
-              <li class="tagline">Children: 2</li>
+            <ul class="member-info-list font-body-lg" id="member_info_list">
+              <li class="tagline" >Nome: <span id="info_name">Tyler Joseph</span></li>
+              <li class="tagline" >Função: <span id="info_role">Vocalista</span></li>
+              <li class="tagline" >Idade: <span id="info_age">33</span> de idade</li>
+              <li class="tagline">Nasceu em Columbus, Ohio - EUA</li>
+              <li class="tagline">MBTI: <span id="info_mbti">INFP</span></li>
+              <li class="tagline">Cônjuge: <span id="info_spouse">Jenna Joseph</span></li>
+              <li class="tagline">Filhos: <span id="info_children">2</span></li>
               <li>
-                <p class="tagline">
-                  Tyler Robert Joseph (born December 1, 1988) is an American
-                  singer-songwriter, rapper, musician, and record producer.
+                <p class="tagline" id="info_member">
+                  Tyler Robert Joseph é um cantor, compositor, multi-instrumentista, produtor de discos e rapper norte-americano. Tyler é o vocalista do duo musical Twenty One Pilots.
                 </p>
               </li>
             </ul>
@@ -157,11 +153,11 @@
           </div>
         </div>
         <div class="select-member">
-          <div class="member-tyler">
-            <img src="assets/img/members/tyler-circle.jpg" class="lozad" alt="" />
+          <div class="member-tyler" >
+            <img src="assets/img/members/tyler-circle.jpg" class="lozad" alt="" id="tyler_circle"/>
           </div>
           <div class="member-josh">
-            <img src="assets/img/members/josh-circle.jpg" class="lozad" alt="" />
+            <img src="assets/img/members/josh-circle.jpg" class="lozad" alt="" id="josh_circle"/>
           </div>
         </div>
       </div>
