@@ -9,6 +9,10 @@
   display: flex !important;
 }
 
+.l-menu {
+  display: none;
+}
+
 .l-menu .menu-nav {
   display: none;
   position: absolute;
